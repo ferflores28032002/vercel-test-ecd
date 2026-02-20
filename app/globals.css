@@ -1,0 +1,69 @@
+@import 'tailwindcss';
+
+:root {
+  /* Professional Color Palette */
+  --primary-red: #e74038;
+  --primary-red-hover: #d43529;
+  --primary-red-light: #fae8e6;
+  --slate-50: #F8FAFC;
+  --slate-100: #F1F5F9;
+  --slate-200: #E2E8F0;
+  --slate-300: #CBD5E1;
+  --slate-400: #94A3B8;
+  --slate-500: #64748B;
+  --slate-600: #475569;
+  --slate-700: #334155;
+  --slate-900: #0F172A;
+  --white: #FFFFFF;
+  --success: #16A34A;
+  --warning: #EA8C00;
+  --error: #DC2626;
+  --info: #0EA5E9;
+}
+
+@theme {
+  --font-sans: 'Geist', 'Geist Fallback';
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  
+  --color-primary: rgb(231 64 56);
+  --color-primary-hover: rgb(212 53 41);
+  --color-primary-light: rgb(250 232 230);
+  --color-success: rgb(22 163 74);
+  --color-warning: rgb(234 140 0);
+  --color-error: rgb(220 38 38);
+  --color-info: rgb(14 165 233);
+}
+
+@layer base {
+  * {
+    @apply outline-slate-400/50;
+  }
+  
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply bg-white text-slate-900 font-sans;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-medium tracking-tight;
+  }
+  
+  h1 {
+    @apply text-3xl;
+  }
+  
+  h2 {
+    @apply text-2xl;
+  }
+  
+  h3 {
+    @apply text-xl;
+  }
+
+  button, [role="button"], a, label[for], select, summary, [tabindex]:not([tabindex="-1"]) {
+    @apply cursor-pointer;
+  }
+}
