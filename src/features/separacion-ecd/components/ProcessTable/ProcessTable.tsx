@@ -50,7 +50,7 @@ export function ProcessTable({
   };
 
   return (
-    <div className="rounded-lg border border-slate-200 bg-white shadow-sm overflow-hidden">
+    <div className="rounded-lg border border-slate-200 bg-white overflow-hidden">
       {/* Horizontal Scroll Container */}
       <div className="overflow-x-auto">
         <table className="w-full min-w-max">

@@ -10,7 +10,7 @@ interface HeaderProps {
 export function Header({ title, breadcrumb }: HeaderProps) {
   return (
     <div className="space-y-2">
-      <h1 className="text-3xl font-bold text-slate-900">{title}</h1>
+      <h1 className="text-xl font-bold text-[#e74038]">{title}</h1>
       <nav className="flex items-center gap-2 text-sm text-slate-600">
         {breadcrumb.map((item, idx) => (
           <div key={idx} className="flex items-center gap-2">

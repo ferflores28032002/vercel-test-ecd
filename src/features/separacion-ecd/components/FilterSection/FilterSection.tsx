@@ -155,7 +155,7 @@ export function FilterSection({
 
   return (
     <>
-      <div className="bg-white rounded-lg border border-slate-200 p-5 shadow-sm relative">
+      <div className="bg-white rounded-lg border border-slate-200 p-5 relative">
         <div className="flex items-center justify-between gap-6">
           {/* Left: Date Pickers */}
           <div className="flex items-start gap-3 min-w-max">
@@ -165,7 +165,7 @@ export function FilterSection({
                 <PopoverTrigger asChild>
                   <Button
                     variant="outline"
-                    className="w-[180px] justify-start text-left font-normal h-9 text-sm"
+                    className="w-[180px] justify-start text-left font-normal h-9 text-sm border-slate-300 shadow-none"
                   >
                     <CalendarIcon className="mr-2 h-4 w-4 text-slate-400" />
                     <span className={startDate ? 'text-slate-900' : 'text-slate-400'}>
@@ -189,7 +189,7 @@ export function FilterSection({
                 <PopoverTrigger asChild>
                   <Button
                     variant="outline"
-                    className="w-[180px] justify-start text-left font-normal h-9 text-sm"
+                    className="w-[180px] justify-start text-left font-normal h-9 text-sm border-slate-300 shadow-none"
                   >
                     <CalendarIcon className="mr-2 h-4 w-4 text-slate-400" />
                     <span className={endDate ? 'text-slate-900' : 'text-slate-400'}>
@@ -235,14 +235,14 @@ export function FilterSection({
                     className="transition-all duration-500"
                   />
                 ))}
-                <text x="50" y="46" textAnchor="middle" fontSize="18" fontWeight="800" fill="#0F172A">
+                <text x="50" y="46" textAnchor="middle" fontSize="18" fontWeight="900" fill="#0F172A">
                   {completedPct}%
                 </text>
-                <text x="50" y="60" textAnchor="middle" fontSize="8" fontWeight="500" fill="#94A3B8">
+                <text x="50" y="60" textAnchor="middle" fontSize="8" fontWeight="700" fill="#475569">
                   completado
                 </text>
               </svg>
-              <span className="text-[10px] text-slate-400 group-hover:text-[#e74038] transition-colors flex items-center gap-1">
+              <span className="text-[10px] text-slate-600 font-semibold group-hover:text-[#e74038] transition-colors flex items-center gap-1">
                 <BarChart3 className="w-3 h-3" />
                 Ver detalle
               </span>
