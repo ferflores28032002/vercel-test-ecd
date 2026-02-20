@@ -1,16 +1,17 @@
 'use client';
 
 import React from 'react';
-import { Check, Clock, X, Zap, Info } from 'lucide-react';
+import { Check, CircleEllipsis, X, Zap, Info } from 'lucide-react';
 
 export type StatusType = 'success' | 'pending' | 'error' | 'in-progress';
 
 interface StatusIconProps {
   status: StatusType;
   tooltip: string;
+  onClick?: () => void;
 }
 
-export function StatusIcon({ status, tooltip }: StatusIconProps) {
+export function StatusIcon({ status, tooltip, onClick }: StatusIconProps) {
   const getIcon = () => {
     switch (status) {
       case 'success':
@@ -22,7 +23,7 @@ export function StatusIcon({ status, tooltip }: StatusIconProps) {
       case 'pending':
         return (
           <div className="flex items-center gap-1">
-            <Clock className="w-5 h-5 text-[#EA8C00] transition-transform hover:scale-110" />
+            <CircleEllipsis className="w-5 h-5 text-[#0EA5E9] transition-transform hover:scale-110" />
           </div>
         );
       case 'error':
@@ -43,7 +44,10 @@ export function StatusIcon({ status, tooltip }: StatusIconProps) {
   };
 
   return (
-    <div className="relative inline-flex group cursor-help">
+    <div
+      className={`relative inline-flex group ${onClick ? 'cursor-pointer' : 'cursor-help'}`}
+      onClick={onClick}
+    >
       {getIcon()}
       {/* Tooltip - Professional Dark Bubble */}
       <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-3 px-3 py-2 bg-slate-900 text-white text-xs font-medium rounded-md whitespace-nowrap opacity-0 group-hover:opacity-100 transition-all duration-200 z-50 pointer-events-none shadow-lg">
