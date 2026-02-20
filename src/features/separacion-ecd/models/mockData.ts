@@ -19,6 +19,58 @@ export const mockSubcuentas: SubcuentaData[] = [
       mem_vs_monitor: { status: 'success', lastUpdate: '2025-12-12 10:30', executedBy: 'Ana Martínez' },
       revision: { status: 'error', lastUpdate: '2025-12-12 08:20', executedBy: 'Fernando Ruiz' },
     },
+    clients: [
+      {
+        id: 'cli-001-1', name: 'BIC349',
+        columns: {
+          medicion: { status: 'success' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'success' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'success' },
+          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success', status2: 'success' }, mem_vs_monitor: { status: 'success' },
+          revision: { status: 'success', status2: 'success' },
+        },
+      },
+      {
+        id: 'cli-001-2', name: 'BICCUAUTITLAN',
+        columns: {
+          medicion: { status: 'success' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'success' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'success' },
+          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success', status2: 'success' }, mem_vs_monitor: { status: 'success' },
+          revision: { status: 'success', status2: 'in-progress' },
+        },
+      },
+      {
+        id: 'cli-001-3', name: 'RARIZPE',
+        columns: {
+          medicion: { status: 'success' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'success' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'success' },
+          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success', status2: 'success' }, mem_vs_monitor: { status: 'success' },
+          revision: { status: 'success', status2: 'success' },
+        },
+      },
+      {
+        id: 'cli-001-4', name: 'SG206',
+        columns: {
+          medicion: { status: 'success' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'success' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'success' },
+          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success', status2: 'success' }, mem_vs_monitor: { status: 'success' },
+          revision: { status: 'success', status2: 'success' },
+        },
+      },
+      {
+        id: 'cli-001-5', name: 'SGOBAIN',
+        columns: {
+          medicion: { status: 'success' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'success' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'success' },
+          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success', status2: 'success' }, mem_vs_monitor: { status: 'success' },
+          revision: { status: 'success', status2: 'in-progress' },
+        },
+      },
+    ],
   },
   {
     id: 'sub-003',
@@ -38,6 +90,38 @@ export const mockSubcuentas: SubcuentaData[] = [
       mem_vs_monitor: { status: 'pending', executedBy: 'María López' },
       revision: { status: 'error', status2: 'pending', lastUpdate: '2025-12-12 07:30', executedBy: 'Ana Martínez', executedBy2: 'Patricia Sánchez' },
     },
+    clients: [
+      {
+        id: 'cli-003-1', name: 'CEMEX_NTE',
+        columns: {
+          medicion: { status: 'in-progress' }, oferta: { status: 'error' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'pending' }, pml_mtr: { status: 'error' }, ecd_dataset: { status: 'in-progress' },
+          ecyp: { status: 'success' }, tablas_mem: { status: 'pending' },
+          validacion: { status: 'success', status2: 'error' }, mem_vs_monitor: { status: 'pending' },
+          revision: { status: 'error', status2: 'pending' },
+        },
+      },
+      {
+        id: 'cli-003-2', name: 'CEMEX_SUR',
+        columns: {
+          medicion: { status: 'success' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'success' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'success' },
+          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success', status2: 'success' }, mem_vs_monitor: { status: 'success' },
+          revision: { status: 'success', status2: 'success' },
+        },
+      },
+      {
+        id: 'cli-003-3', name: 'VITRO_PTE',
+        columns: {
+          medicion: { status: 'pending' }, oferta: { status: 'pending' }, asignacion: { status: 'pending' },
+          pml_mda: { status: 'pending' }, pml_mtr: { status: 'pending' }, ecd_dataset: { status: 'pending' },
+          ecyp: { status: 'pending' }, tablas_mem: { status: 'pending' },
+          validacion: { status: 'pending', status2: 'pending' }, mem_vs_monitor: { status: 'pending' },
+          revision: { status: 'pending', status2: 'pending' },
+        },
+      },
+    ],
   },
   {
     id: 'sub-004',
@@ -57,6 +141,38 @@ export const mockSubcuentas: SubcuentaData[] = [
       mem_vs_monitor: { status: 'success', lastUpdate: '2025-12-12 10:25', executedBy: 'Jorge Ramírez' },
       revision: { status: 'pending', status2: 'in-progress', executedBy: 'Carlos García', executedBy2: 'María López' },
     },
+    clients: [
+      {
+        id: 'cli-004-1', name: 'ALFA_NTE',
+        columns: {
+          medicion: { status: 'success' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'success' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'success' },
+          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success', status2: 'success' }, mem_vs_monitor: { status: 'success' },
+          revision: { status: 'success', status2: 'success' },
+        },
+      },
+      {
+        id: 'cli-004-2', name: 'FEMSA_CTR',
+        columns: {
+          medicion: { status: 'success' }, oferta: { status: 'pending' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'success' }, pml_mtr: { status: 'pending' }, ecd_dataset: { status: 'success' },
+          ecyp: { status: 'success' }, tablas_mem: { status: 'pending' },
+          validacion: { status: 'success', status2: 'pending' }, mem_vs_monitor: { status: 'success' },
+          revision: { status: 'success', status2: 'pending' },
+        },
+      },
+      {
+        id: 'cli-004-3', name: 'BIMBO_SUR',
+        columns: {
+          medicion: { status: 'success' }, oferta: { status: 'error' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'in-progress' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'success' },
+          ecyp: { status: 'pending' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'error', status2: 'success' }, mem_vs_monitor: { status: 'success' },
+          revision: { status: 'in-progress', status2: 'success' },
+        },
+      },
+    ],
   },
   {
     id: 'sub-005',
@@ -76,6 +192,28 @@ export const mockSubcuentas: SubcuentaData[] = [
       mem_vs_monitor: { status: 'pending', executedBy: 'Jorge Ramírez' },
       revision: { status: 'pending', status2: 'pending', executedBy: 'Patricia Sánchez', executedBy2: 'Jorge Ramírez' },
     },
+    clients: [
+      {
+        id: 'cli-005-1', name: 'PEMEX_OCC',
+        columns: {
+          medicion: { status: 'in-progress' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'success' }, pml_mtr: { status: 'in-progress' }, ecd_dataset: { status: 'success' },
+          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success', status2: 'in-progress' }, mem_vs_monitor: { status: 'success' },
+          revision: { status: 'success', status2: 'success' },
+        },
+      },
+      {
+        id: 'cli-005-2', name: 'TELMEX_NTE',
+        columns: {
+          medicion: { status: 'pending' }, oferta: { status: 'pending' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'pending' }, pml_mtr: { status: 'pending' }, ecd_dataset: { status: 'pending' },
+          ecyp: { status: 'success' }, tablas_mem: { status: 'pending' },
+          validacion: { status: 'pending', status2: 'pending' }, mem_vs_monitor: { status: 'pending' },
+          revision: { status: 'pending', status2: 'pending' },
+        },
+      },
+    ],
   },
   {
     id: 'sub-006',
@@ -95,6 +233,48 @@ export const mockSubcuentas: SubcuentaData[] = [
       mem_vs_monitor: { status: 'success', executedBy: 'Roberto Hernández' },
       revision: { status: 'success', status2: 'success', executedBy: 'Fernando Ruiz', executedBy2: 'Ana Martínez' },
     },
+    clients: [
+      {
+        id: 'cli-006-1', name: 'SORIANA_PTE',
+        columns: {
+          medicion: { status: 'error' }, oferta: { status: 'success' }, asignacion: { status: 'error' },
+          pml_mda: { status: 'success' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'error' },
+          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'error', status2: 'success' }, mem_vs_monitor: { status: 'error' },
+          revision: { status: 'success', status2: 'error' },
+        },
+      },
+      {
+        id: 'cli-006-2', name: 'MODELO_BCS',
+        columns: {
+          medicion: { status: 'success' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'success' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'success' },
+          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success', status2: 'success' }, mem_vs_monitor: { status: 'success' },
+          revision: { status: 'success', status2: 'success' },
+        },
+      },
+      {
+        id: 'cli-006-3', name: 'COPPEL_CHI',
+        columns: {
+          medicion: { status: 'in-progress' }, oferta: { status: 'in-progress' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'success' }, pml_mtr: { status: 'in-progress' }, ecd_dataset: { status: 'success' },
+          ecyp: { status: 'in-progress' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'in-progress', status2: 'success' }, mem_vs_monitor: { status: 'success' },
+          revision: { status: 'in-progress', status2: 'success' },
+        },
+      },
+      {
+        id: 'cli-006-4', name: 'BACHOCO_SLP',
+        columns: {
+          medicion: { status: 'success' }, oferta: { status: 'error' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'pending' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'in-progress' },
+          ecyp: { status: 'success' }, tablas_mem: { status: 'error' },
+          validacion: { status: 'success', status2: 'pending' }, mem_vs_monitor: { status: 'success' },
+          revision: { status: 'in-progress', status2: 'success' },
+        },
+      },
+    ],
   },
   {
     id: 'sub-008',
@@ -114,6 +294,58 @@ export const mockSubcuentas: SubcuentaData[] = [
       mem_vs_monitor: { status: 'success', executedBy: 'Ana Martínez' },
       revision: { status: 'success', status2: 'success', executedBy: 'María López', executedBy2: 'Jorge Ramírez' },
     },
+    clients: [
+      {
+        id: 'cli-008-1', name: 'BIC349',
+        columns: {
+          medicion: { status: 'success' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'success' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'success' },
+          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success', status2: 'success' }, mem_vs_monitor: { status: 'success' },
+          revision: { status: 'success', status2: 'success' },
+        },
+      },
+      {
+        id: 'cli-008-2', name: 'BICCUAUTITLAN',
+        columns: {
+          medicion: { status: 'success' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'success' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'success' },
+          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success', status2: 'success' }, mem_vs_monitor: { status: 'success' },
+          revision: { status: 'success', status2: 'success' },
+        },
+      },
+      {
+        id: 'cli-008-3', name: 'RARIZPE',
+        columns: {
+          medicion: { status: 'success' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'success' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'success' },
+          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success', status2: 'success' }, mem_vs_monitor: { status: 'success' },
+          revision: { status: 'success', status2: 'success' },
+        },
+      },
+      {
+        id: 'cli-008-4', name: 'SG206',
+        columns: {
+          medicion: { status: 'success' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'success' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'success' },
+          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success', status2: 'success' }, mem_vs_monitor: { status: 'success' },
+          revision: { status: 'success', status2: 'success' },
+        },
+      },
+      {
+        id: 'cli-008-5', name: 'SGOBAIN',
+        columns: {
+          medicion: { status: 'success' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'success' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'success' },
+          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success', status2: 'success' }, mem_vs_monitor: { status: 'success' },
+          revision: { status: 'success', status2: 'in-progress' },
+        },
+      },
+    ],
   },
   {
     id: 'sub-009',
@@ -133,6 +365,38 @@ export const mockSubcuentas: SubcuentaData[] = [
       mem_vs_monitor: { status: 'success', lastUpdate: '2025-12-12 07:35', executedBy: 'Fernando Ruiz' },
       revision: { status: 'pending', status2: 'error', executedBy: 'Ana Martínez', executedBy2: 'Luis Mendoza' },
     },
+    clients: [
+      {
+        id: 'cli-009-1', name: 'LALA_AGS',
+        columns: {
+          medicion: { status: 'success' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'success' }, pml_mtr: { status: 'error' }, ecd_dataset: { status: 'success' },
+          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success', status2: 'success' }, mem_vs_monitor: { status: 'success' },
+          revision: { status: 'success', status2: 'success' },
+        },
+      },
+      {
+        id: 'cli-009-2', name: 'HERDEZ_JAL',
+        columns: {
+          medicion: { status: 'success' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'success' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'success' },
+          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success', status2: 'success' }, mem_vs_monitor: { status: 'success' },
+          revision: { status: 'success', status2: 'success' },
+        },
+      },
+      {
+        id: 'cli-009-3', name: 'MABE_QRO',
+        columns: {
+          medicion: { status: 'success' }, oferta: { status: 'pending' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'success' }, pml_mtr: { status: 'pending' }, ecd_dataset: { status: 'success' },
+          ecyp: { status: 'success' }, tablas_mem: { status: 'pending' },
+          validacion: { status: 'success', status2: 'pending' }, mem_vs_monitor: { status: 'success' },
+          revision: { status: 'success', status2: 'pending' },
+        },
+      },
+    ],
   },
   {
     id: 'sub-010',
@@ -152,6 +416,28 @@ export const mockSubcuentas: SubcuentaData[] = [
       mem_vs_monitor: { status: 'success', lastUpdate: '2025-12-12 08:35', executedBy: 'Ana Martínez' },
       revision: { status: 'in-progress', status2: 'success', lastUpdate: '2025-12-12 09:20', executedBy: 'Roberto Hernández', executedBy2: 'Gabriela Ríos' },
     },
+    clients: [
+      {
+        id: 'cli-010-1', name: 'CEMEX_MTY',
+        columns: {
+          medicion: { status: 'success' }, oferta: { status: 'error' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'in-progress' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'success' },
+          ecyp: { status: 'pending' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'error', status2: 'success' }, mem_vs_monitor: { status: 'success' },
+          revision: { status: 'in-progress', status2: 'success' },
+        },
+      },
+      {
+        id: 'cli-010-2', name: 'VITRO_SLP',
+        columns: {
+          medicion: { status: 'in-progress' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'success' }, pml_mtr: { status: 'in-progress' }, ecd_dataset: { status: 'success' },
+          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success', status2: 'in-progress' }, mem_vs_monitor: { status: 'success' },
+          revision: { status: 'success', status2: 'success' },
+        },
+      },
+    ],
   },
   {
     id: 'sub-011',
@@ -171,6 +457,48 @@ export const mockSubcuentas: SubcuentaData[] = [
       mem_vs_monitor: { status: 'success', lastUpdate: '2025-12-12 10:50', executedBy: 'Roberto Hernández' },
       revision: { status: 'success', status2: 'success', lastUpdate: '2025-12-12 10:55', executedBy: 'Sandra Torres', executedBy2: 'Gabriela Ríos' },
     },
+    clients: [
+      {
+        id: 'cli-011-1', name: 'GRUMA_NLE',
+        columns: {
+          medicion: { status: 'pending' }, oferta: { status: 'pending' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'pending' }, pml_mtr: { status: 'pending' }, ecd_dataset: { status: 'pending' },
+          ecyp: { status: 'success' }, tablas_mem: { status: 'pending' },
+          validacion: { status: 'pending', status2: 'pending' }, mem_vs_monitor: { status: 'pending' },
+          revision: { status: 'pending', status2: 'pending' },
+        },
+      },
+      {
+        id: 'cli-011-2', name: 'ALFA_NTE',
+        columns: {
+          medicion: { status: 'error' }, oferta: { status: 'success' }, asignacion: { status: 'error' },
+          pml_mda: { status: 'success' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'error' },
+          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'error', status2: 'success' }, mem_vs_monitor: { status: 'error' },
+          revision: { status: 'success', status2: 'error' },
+        },
+      },
+      {
+        id: 'cli-011-3', name: 'FEMSA_CTR',
+        columns: {
+          medicion: { status: 'success' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'success' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'success' },
+          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success', status2: 'success' }, mem_vs_monitor: { status: 'success' },
+          revision: { status: 'success', status2: 'success' },
+        },
+      },
+      {
+        id: 'cli-011-4', name: 'BIMBO_SUR',
+        columns: {
+          medicion: { status: 'in-progress' }, oferta: { status: 'in-progress' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'success' }, pml_mtr: { status: 'in-progress' }, ecd_dataset: { status: 'success' },
+          ecyp: { status: 'in-progress' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'in-progress', status2: 'success' }, mem_vs_monitor: { status: 'success' },
+          revision: { status: 'in-progress', status2: 'success' },
+        },
+      },
+    ],
   },
   {
     id: 'sub-012',
@@ -190,6 +518,38 @@ export const mockSubcuentas: SubcuentaData[] = [
       mem_vs_monitor: { status: 'pending', executedBy: 'María López' },
       revision: { status: 'pending', status2: 'pending', executedBy: 'Fernando Ruiz', executedBy2: 'Sandra Torres' },
     },
+    clients: [
+      {
+        id: 'cli-012-1', name: 'PEMEX_OCC',
+        columns: {
+          medicion: { status: 'success' }, oferta: { status: 'error' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'pending' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'in-progress' },
+          ecyp: { status: 'success' }, tablas_mem: { status: 'error' },
+          validacion: { status: 'success', status2: 'pending' }, mem_vs_monitor: { status: 'success' },
+          revision: { status: 'in-progress', status2: 'success' },
+        },
+      },
+      {
+        id: 'cli-012-2', name: 'TELMEX_NTE',
+        columns: {
+          medicion: { status: 'success' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'success' }, pml_mtr: { status: 'error' }, ecd_dataset: { status: 'success' },
+          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success', status2: 'success' }, mem_vs_monitor: { status: 'success' },
+          revision: { status: 'success', status2: 'success' },
+        },
+      },
+      {
+        id: 'cli-012-3', name: 'SORIANA_PTE',
+        columns: {
+          medicion: { status: 'success' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'success' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'success' },
+          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success', status2: 'success' }, mem_vs_monitor: { status: 'success' },
+          revision: { status: 'success', status2: 'success' },
+        },
+      },
+    ],
   },
   {
     id: 'sub-013',
@@ -209,6 +569,28 @@ export const mockSubcuentas: SubcuentaData[] = [
       mem_vs_monitor: { status: 'in-progress', lastUpdate: '2025-12-12 09:45', executedBy: 'Fernando Ruiz' },
       revision: { status: 'success', status2: 'error', lastUpdate: '2025-12-12 09:30', executedBy: 'Gabriela Ríos', executedBy2: 'Luis Mendoza' },
     },
+    clients: [
+      {
+        id: 'cli-013-1', name: 'MODELO_BCS',
+        columns: {
+          medicion: { status: 'success' }, oferta: { status: 'pending' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'success' }, pml_mtr: { status: 'pending' }, ecd_dataset: { status: 'success' },
+          ecyp: { status: 'success' }, tablas_mem: { status: 'pending' },
+          validacion: { status: 'success', status2: 'pending' }, mem_vs_monitor: { status: 'success' },
+          revision: { status: 'success', status2: 'pending' },
+        },
+      },
+      {
+        id: 'cli-013-2', name: 'COPPEL_CHI',
+        columns: {
+          medicion: { status: 'success' }, oferta: { status: 'error' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'in-progress' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'success' },
+          ecyp: { status: 'pending' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'error', status2: 'success' }, mem_vs_monitor: { status: 'success' },
+          revision: { status: 'in-progress', status2: 'success' },
+        },
+      },
+    ],
   },
   {
     id: 'sub-014',
@@ -228,6 +610,38 @@ export const mockSubcuentas: SubcuentaData[] = [
       mem_vs_monitor: { status: 'success', lastUpdate: '2025-12-12 11:35', executedBy: 'María López' },
       revision: { status: 'success', status2: 'success', lastUpdate: '2025-12-12 11:40', executedBy: 'Ana Martínez', executedBy2: 'Roberto Hernández' },
     },
+    clients: [
+      {
+        id: 'cli-014-1', name: 'BACHOCO_SLP',
+        columns: {
+          medicion: { status: 'in-progress' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'success' }, pml_mtr: { status: 'in-progress' }, ecd_dataset: { status: 'success' },
+          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success', status2: 'in-progress' }, mem_vs_monitor: { status: 'success' },
+          revision: { status: 'success', status2: 'success' },
+        },
+      },
+      {
+        id: 'cli-014-2', name: 'LALA_AGS',
+        columns: {
+          medicion: { status: 'pending' }, oferta: { status: 'pending' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'pending' }, pml_mtr: { status: 'pending' }, ecd_dataset: { status: 'pending' },
+          ecyp: { status: 'success' }, tablas_mem: { status: 'pending' },
+          validacion: { status: 'pending', status2: 'pending' }, mem_vs_monitor: { status: 'pending' },
+          revision: { status: 'pending', status2: 'pending' },
+        },
+      },
+      {
+        id: 'cli-014-3', name: 'HERDEZ_JAL',
+        columns: {
+          medicion: { status: 'error' }, oferta: { status: 'success' }, asignacion: { status: 'error' },
+          pml_mda: { status: 'success' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'error' },
+          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'error', status2: 'success' }, mem_vs_monitor: { status: 'error' },
+          revision: { status: 'success', status2: 'error' },
+        },
+      },
+    ],
   },
   {
     id: 'sub-015',
@@ -247,6 +661,48 @@ export const mockSubcuentas: SubcuentaData[] = [
       mem_vs_monitor: { status: 'pending', executedBy: 'Gabriela Ríos' },
       revision: { status: 'error', status2: 'pending', lastUpdate: '2025-12-12 09:15', executedBy: 'Carlos García', executedBy2: 'Fernando Ruiz' },
     },
+    clients: [
+      {
+        id: 'cli-015-1', name: 'MABE_QRO',
+        columns: {
+          medicion: { status: 'success' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'success' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'success' },
+          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success', status2: 'success' }, mem_vs_monitor: { status: 'success' },
+          revision: { status: 'success', status2: 'success' },
+        },
+      },
+      {
+        id: 'cli-015-2', name: 'CEMEX_MTY',
+        columns: {
+          medicion: { status: 'in-progress' }, oferta: { status: 'in-progress' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'success' }, pml_mtr: { status: 'in-progress' }, ecd_dataset: { status: 'success' },
+          ecyp: { status: 'in-progress' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'in-progress', status2: 'success' }, mem_vs_monitor: { status: 'success' },
+          revision: { status: 'in-progress', status2: 'success' },
+        },
+      },
+      {
+        id: 'cli-015-3', name: 'VITRO_SLP',
+        columns: {
+          medicion: { status: 'success' }, oferta: { status: 'error' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'pending' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'in-progress' },
+          ecyp: { status: 'success' }, tablas_mem: { status: 'error' },
+          validacion: { status: 'success', status2: 'pending' }, mem_vs_monitor: { status: 'success' },
+          revision: { status: 'in-progress', status2: 'success' },
+        },
+      },
+      {
+        id: 'cli-015-4', name: 'GRUMA_NLE',
+        columns: {
+          medicion: { status: 'success' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'success' }, pml_mtr: { status: 'error' }, ecd_dataset: { status: 'success' },
+          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success', status2: 'success' }, mem_vs_monitor: { status: 'success' },
+          revision: { status: 'success', status2: 'success' },
+        },
+      },
+    ],
   },
   {
     id: 'sub-016',
@@ -266,6 +722,28 @@ export const mockSubcuentas: SubcuentaData[] = [
       mem_vs_monitor: { status: 'success', lastUpdate: '2025-12-12 08:38', executedBy: 'María López' },
       revision: { status: 'success', status2: 'in-progress', lastUpdate: '2025-12-12 08:42', executedBy: 'Sandra Torres', executedBy2: 'Diego Flores' },
     },
+    clients: [
+      {
+        id: 'cli-016-1', name: 'ALFA_NTE',
+        columns: {
+          medicion: { status: 'success' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'success' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'success' },
+          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success', status2: 'success' }, mem_vs_monitor: { status: 'success' },
+          revision: { status: 'success', status2: 'success' },
+        },
+      },
+      {
+        id: 'cli-016-2', name: 'FEMSA_CTR',
+        columns: {
+          medicion: { status: 'success' }, oferta: { status: 'pending' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'success' }, pml_mtr: { status: 'pending' }, ecd_dataset: { status: 'success' },
+          ecyp: { status: 'success' }, tablas_mem: { status: 'pending' },
+          validacion: { status: 'success', status2: 'pending' }, mem_vs_monitor: { status: 'success' },
+          revision: { status: 'success', status2: 'pending' },
+        },
+      },
+    ],
   },
   {
     id: 'sub-017',
@@ -285,6 +763,38 @@ export const mockSubcuentas: SubcuentaData[] = [
       mem_vs_monitor: { status: 'success', lastUpdate: '2025-12-12 07:45', executedBy: 'Gabriela Ríos' },
       revision: { status: 'success', status2: 'success', lastUpdate: '2025-12-12 07:50', executedBy: 'Jorge Ramírez', executedBy2: 'Patricia Sánchez' },
     },
+    clients: [
+      {
+        id: 'cli-017-1', name: 'BIMBO_SUR',
+        columns: {
+          medicion: { status: 'success' }, oferta: { status: 'error' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'in-progress' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'success' },
+          ecyp: { status: 'pending' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'error', status2: 'success' }, mem_vs_monitor: { status: 'success' },
+          revision: { status: 'in-progress', status2: 'success' },
+        },
+      },
+      {
+        id: 'cli-017-2', name: 'PEMEX_OCC',
+        columns: {
+          medicion: { status: 'in-progress' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'success' }, pml_mtr: { status: 'in-progress' }, ecd_dataset: { status: 'success' },
+          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success', status2: 'in-progress' }, mem_vs_monitor: { status: 'success' },
+          revision: { status: 'success', status2: 'success' },
+        },
+      },
+      {
+        id: 'cli-017-3', name: 'TELMEX_NTE',
+        columns: {
+          medicion: { status: 'pending' }, oferta: { status: 'pending' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'pending' }, pml_mtr: { status: 'pending' }, ecd_dataset: { status: 'pending' },
+          ecyp: { status: 'success' }, tablas_mem: { status: 'pending' },
+          validacion: { status: 'pending', status2: 'pending' }, mem_vs_monitor: { status: 'pending' },
+          revision: { status: 'pending', status2: 'pending' },
+        },
+      },
+    ],
   },
   {
     id: 'sub-018',
@@ -304,6 +814,48 @@ export const mockSubcuentas: SubcuentaData[] = [
       mem_vs_monitor: { status: 'pending', executedBy: 'Jorge Ramírez' },
       revision: { status: 'pending', status2: 'pending', executedBy: 'Diego Flores', executedBy2: 'Carlos García' },
     },
+    clients: [
+      {
+        id: 'cli-018-1', name: 'SORIANA_PTE',
+        columns: {
+          medicion: { status: 'error' }, oferta: { status: 'success' }, asignacion: { status: 'error' },
+          pml_mda: { status: 'success' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'error' },
+          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'error', status2: 'success' }, mem_vs_monitor: { status: 'error' },
+          revision: { status: 'success', status2: 'error' },
+        },
+      },
+      {
+        id: 'cli-018-2', name: 'MODELO_BCS',
+        columns: {
+          medicion: { status: 'success' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'success' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'success' },
+          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success', status2: 'success' }, mem_vs_monitor: { status: 'success' },
+          revision: { status: 'success', status2: 'success' },
+        },
+      },
+      {
+        id: 'cli-018-3', name: 'COPPEL_CHI',
+        columns: {
+          medicion: { status: 'in-progress' }, oferta: { status: 'in-progress' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'success' }, pml_mtr: { status: 'in-progress' }, ecd_dataset: { status: 'success' },
+          ecyp: { status: 'in-progress' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'in-progress', status2: 'success' }, mem_vs_monitor: { status: 'success' },
+          revision: { status: 'in-progress', status2: 'success' },
+        },
+      },
+      {
+        id: 'cli-018-4', name: 'BACHOCO_SLP',
+        columns: {
+          medicion: { status: 'success' }, oferta: { status: 'error' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'pending' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'in-progress' },
+          ecyp: { status: 'success' }, tablas_mem: { status: 'error' },
+          validacion: { status: 'success', status2: 'pending' }, mem_vs_monitor: { status: 'success' },
+          revision: { status: 'in-progress', status2: 'success' },
+        },
+      },
+    ],
   },
   {
     id: 'sub-019',
@@ -323,6 +875,38 @@ export const mockSubcuentas: SubcuentaData[] = [
       mem_vs_monitor: { status: 'success', lastUpdate: '2025-12-12 10:10', executedBy: 'María López' },
       revision: { status: 'pending', status2: 'in-progress', executedBy: 'Luis Mendoza', executedBy2: 'Sandra Torres' },
     },
+    clients: [
+      {
+        id: 'cli-019-1', name: 'LALA_AGS',
+        columns: {
+          medicion: { status: 'success' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'success' }, pml_mtr: { status: 'error' }, ecd_dataset: { status: 'success' },
+          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success', status2: 'success' }, mem_vs_monitor: { status: 'success' },
+          revision: { status: 'success', status2: 'success' },
+        },
+      },
+      {
+        id: 'cli-019-2', name: 'HERDEZ_JAL',
+        columns: {
+          medicion: { status: 'success' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'success' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'success' },
+          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success', status2: 'success' }, mem_vs_monitor: { status: 'success' },
+          revision: { status: 'success', status2: 'success' },
+        },
+      },
+      {
+        id: 'cli-019-3', name: 'MABE_QRO',
+        columns: {
+          medicion: { status: 'success' }, oferta: { status: 'pending' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'success' }, pml_mtr: { status: 'pending' }, ecd_dataset: { status: 'success' },
+          ecyp: { status: 'success' }, tablas_mem: { status: 'pending' },
+          validacion: { status: 'success', status2: 'pending' }, mem_vs_monitor: { status: 'success' },
+          revision: { status: 'success', status2: 'pending' },
+        },
+      },
+    ],
   },
   {
     id: 'sub-020',
@@ -342,6 +926,28 @@ export const mockSubcuentas: SubcuentaData[] = [
       mem_vs_monitor: { status: 'pending', executedBy: 'Jorge Ramírez' },
       revision: { status: 'success', status2: 'in-progress', lastUpdate: '2025-12-12 12:15', executedBy: 'Gabriela Ríos', executedBy2: 'Diego Flores' },
     },
+    clients: [
+      {
+        id: 'cli-020-1', name: 'CEMEX_MTY',
+        columns: {
+          medicion: { status: 'success' }, oferta: { status: 'error' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'in-progress' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'success' },
+          ecyp: { status: 'pending' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'error', status2: 'success' }, mem_vs_monitor: { status: 'success' },
+          revision: { status: 'in-progress', status2: 'success' },
+        },
+      },
+      {
+        id: 'cli-020-2', name: 'VITRO_SLP',
+        columns: {
+          medicion: { status: 'in-progress' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
+          pml_mda: { status: 'success' }, pml_mtr: { status: 'in-progress' }, ecd_dataset: { status: 'success' },
+          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success', status2: 'in-progress' }, mem_vs_monitor: { status: 'success' },
+          revision: { status: 'success', status2: 'success' },
+        },
+      },
+    ],
   },
 ];
 

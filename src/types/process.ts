@@ -13,6 +13,20 @@ export interface ProcessAction {
   icon: string;
 }
 
+export interface ClientData {
+  id: string;
+  name: string;
+  columns: {
+    [key: string]: {
+      status: ProcessStatus;
+      status2?: ProcessStatus;
+      lastUpdate?: string;
+      executedBy?: string;
+      executedBy2?: string;
+    };
+  };
+}
+
 export interface SubcuentaData {
   id: string;
   code: string;
@@ -27,6 +41,7 @@ export interface SubcuentaData {
       executedBy2?: string;
     };
   };
+  clients?: ClientData[];
 }
 
 export interface SeparacionECDData {
