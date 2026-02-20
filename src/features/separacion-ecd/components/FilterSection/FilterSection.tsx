@@ -247,11 +247,8 @@ export function FilterSection({
                     className="transition-all duration-500"
                   />
                 ))}
-                <text x="50" y="46" textAnchor="middle" fontSize="18" fontWeight="900" fill="#0F172A">
+                <text x="50" y="54" textAnchor="middle" fontSize="18" fontWeight="900" fill="#0F172A">
                   {completedPct}%
-                </text>
-                <text x="50" y="60" textAnchor="middle" fontSize="8" fontWeight="700" fill="#475569">
-                  completado
                 </text>
               </svg>
               <span className="text-[10px] text-slate-600 font-semibold group-hover:text-[#e74038] transition-colors flex items-center gap-1">

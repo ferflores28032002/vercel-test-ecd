@@ -72,7 +72,16 @@ export function ConfirmationModal({
 
         {/* Message */}
         <div className="space-y-2">
-          <p className="text-sm text-slate-600">{message}</p>
+          {hasInvalid ? (
+            <p className="text-sm text-slate-600">
+              Solo es posible {isDelete ? 'eliminar' : 'ejecutar'}{' '}
+              <span className="font-semibold text-emerald-700">{validItems.length}</span> de{' '}
+              <span className="font-semibold text-slate-900">{validationResults!.length}</span>{' '}
+              subcuentas seleccionadas. ¿Desea continuar?
+            </p>
+          ) : (
+            <p className="text-sm text-slate-600">{message}</p>
+          )}
           <p className="text-sm font-medium text-slate-900">
             Total de registros: <span className="text-[#e74038]">{selectedCount}</span>
           </p>
