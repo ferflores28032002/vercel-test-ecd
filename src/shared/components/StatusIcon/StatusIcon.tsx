@@ -23,7 +23,7 @@ export function StatusIcon({ status, tooltip, onClick }: StatusIconProps) {
       case 'pending':
         return (
           <div className="flex items-center gap-1">
-            <CircleEllipsis className="w-5 h-5 text-[#0EA5E9] transition-transform hover:scale-110" />
+            <CircleEllipsis className="w-5 h-5 text-[#94A3B8] transition-transform hover:scale-110" />
           </div>
         );
       case 'error':
