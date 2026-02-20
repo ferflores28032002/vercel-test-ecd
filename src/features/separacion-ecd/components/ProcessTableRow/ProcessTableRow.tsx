@@ -29,7 +29,7 @@ export function ProcessTableRow({
         }`}
       >
         {/* Expand chevron - Sticky col 1 */}
-        <td className="w-8 px-2 py-3 sticky left-0 z-10 bg-inherit">
+        <td className="w-8 px-2 py-3 sticky left-0 z-10 bg-white">
           <button
             onClick={() => onToggleExpand(subcuenta.id)}
             className={`p-1 rounded hover:bg-slate-200 transition-colors ${
@@ -45,7 +45,7 @@ export function ProcessTableRow({
         </td>
 
         {/* Checkbox - Sticky col 2 */}
-        <td className="w-10 px-2 py-3 sticky left-8 z-10 bg-inherit">
+        <td className="w-10 px-2 py-3 sticky left-8 z-10 bg-white">
           <input
             type="checkbox"
             checked={isSelected}
@@ -55,7 +55,7 @@ export function ProcessTableRow({
         </td>
 
         {/* Subcuenta Code - Sticky col 3 */}
-        <td className="px-4 py-3 font-medium text-slate-900 whitespace-nowrap sticky left-[72px] z-10 bg-inherit min-w-[140px]">
+        <td className="px-4 py-3 font-medium text-slate-900 whitespace-nowrap sticky left-[72px] z-10 bg-white min-w-[140px]">
           {subcuenta.code}
         </td>
 
@@ -86,14 +86,14 @@ export function ProcessTableRow({
       {subcuenta.isExpanded && subcuenta.clients?.map((client) => (
         <tr
           key={client.id}
-          className="border-b border-slate-100 transition-colors bg-gray-100/80 hover:bg-gray-200/60"
+          className="border-b border-slate-100 transition-colors bg-gray-100 hover:bg-gray-200/60"
         >
           {/* Empty space for chevron + checkbox columns - Sticky col 1+2 */}
-          <td className="w-8 px-2 py-2.5 sticky left-0 z-10 bg-gray-100/80" />
-          <td className="w-10 px-2 py-2.5 sticky left-8 z-10 bg-gray-100/80" />
+          <td className="w-8 px-2 py-2.5 sticky left-0 z-10 bg-gray-100" />
+          <td className="w-10 px-2 py-2.5 sticky left-8 z-10 bg-gray-100" />
 
           {/* Client Name - Sticky col 3 */}
-          <td className="px-4 py-2.5 whitespace-nowrap sticky left-[72px] z-10 bg-gray-100/80 min-w-[140px]">
+          <td className="px-4 py-2.5 whitespace-nowrap sticky left-[72px] z-10 bg-gray-100 min-w-[140px]">
             <span className="text-sm text-slate-600 font-medium pl-3">
               {client.name}
             </span>
