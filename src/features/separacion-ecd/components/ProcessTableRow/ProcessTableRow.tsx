@@ -5,7 +5,7 @@ import { ChevronDown, CircleEllipsis } from 'lucide-react';
 import { SubcuentaData } from '@/types/process';
 import { StatusIcon } from '@/shared/components/StatusIcon/StatusIcon';
 import { getStatusTooltip } from '../../utils/helpers';
-import { procesColumns } from '../../models/mockData';
+import { procesColumns, groupSeparatorIndices } from '../../models/mockData';
 
 interface PendingModalInfo {
   subcuentaCode: string;
@@ -71,33 +71,37 @@ export function ProcessTableRow({
         </td>
 
         {/* Subcuenta Code - Sticky col 3 */}
-        <td className="px-4 py-3 text-sm font-medium text-slate-900 whitespace-nowrap sticky left-[72px] z-10 bg-white min-w-[140px]">
+        <td className="px-4 py-3 text-sm font-medium text-slate-900 whitespace-nowrap sticky left-[72px] z-10 bg-white min-w-[140px] shadow-[4px_0_6px_-2px_rgba(0,0,0,0.1)]">
           {subcuenta.code}
         </td>
+        <td className="w-[5rem]" />
 
         {/* Status Columns - Icons Only */}
-        {procesColumns.map((column) => {
+        {procesColumns.map((column, index) => {
           const colData = subcuenta.columns[column.id];
           const hasDoubleStatus = colData?.status2 !== undefined;
           const status1 = colData?.status || 'pending';
           const status2 = colData?.status2;
           return (
-            <td key={column.id} className="px-4 py-3 text-center min-w-[110px]">
-              <div className="flex items-center justify-center gap-1.5">
-                <StatusIcon
-                  status={status1}
-                  tooltip={getStatusTooltip(status1)}
-                  onClick={status1 === 'pending' ? () => handlePendingClick(subcuenta.code, column.label) : undefined}
-                />
-                {hasDoubleStatus && (
+            <React.Fragment key={column.id}>
+              {groupSeparatorIndices.has(index) && <td className="w-[7rem]" />}
+              <td className="px-0 py-3 text-center">
+                <div className="flex items-center justify-center gap-1.5">
                   <StatusIcon
-                    status={status2!}
-                    tooltip={getStatusTooltip(status2!)}
-                    onClick={status2 === 'pending' ? () => handlePendingClick(subcuenta.code, column.label) : undefined}
+                    status={status1}
+                    tooltip={getStatusTooltip(status1)}
+                    onClick={status1 === 'pending' ? () => handlePendingClick(subcuenta.code, column.label) : undefined}
                   />
-                )}
-              </div>
-            </td>
+                  {hasDoubleStatus && (
+                    <StatusIcon
+                      status={status2!}
+                      tooltip={getStatusTooltip(status2!)}
+                      onClick={status2 === 'pending' ? () => handlePendingClick(subcuenta.code, column.label) : undefined}
+                    />
+                  )}
+                </div>
+              </td>
+            </React.Fragment>
           );
         })}
       </tr>
@@ -113,35 +117,39 @@ export function ProcessTableRow({
           <td className="w-10 px-2 py-2.5 sticky left-8 z-10 bg-gray-100" />
 
           {/* Client Name - Sticky col 3 */}
-          <td className="px-4 py-2.5 whitespace-nowrap sticky left-[72px] z-10 bg-gray-100 min-w-[140px]">
+          <td className="px-4 py-2.5 whitespace-nowrap sticky left-[72px] z-10 bg-gray-100 min-w-[140px] shadow-[4px_0_6px_-2px_rgba(0,0,0,0.1)]">
             <span className="text-sm text-slate-600 font-medium pl-3">
               {client.name}
             </span>
           </td>
+          <td className="w-[5rem]" />
 
           {/* Status Columns */}
-          {procesColumns.map((column) => {
+          {procesColumns.map((column, index) => {
             const colData = client.columns[column.id];
             const hasDoubleStatus = colData?.status2 !== undefined;
             const status1 = colData?.status || 'pending';
             const status2 = colData?.status2;
             return (
-              <td key={column.id} className="px-4 py-2.5 text-center min-w-[110px]">
-                <div className="flex items-center justify-center gap-1.5">
-                  <StatusIcon
-                    status={status1}
-                    tooltip={getStatusTooltip(status1)}
-                    onClick={status1 === 'pending' ? () => handlePendingClick(client.name, column.label) : undefined}
-                  />
-                  {hasDoubleStatus && (
+              <React.Fragment key={column.id}>
+                {groupSeparatorIndices.has(index) && <td className="w-[7rem]" />}
+                <td className="px-0 py-2.5 text-center">
+                  <div className="flex items-center justify-center gap-1.5">
                     <StatusIcon
-                      status={status2!}
-                      tooltip={getStatusTooltip(status2!)}
-                      onClick={status2 === 'pending' ? () => handlePendingClick(client.name, column.label) : undefined}
+                      status={status1}
+                      tooltip={getStatusTooltip(status1)}
+                      onClick={status1 === 'pending' ? () => handlePendingClick(client.name, column.label) : undefined}
                     />
-                  )}
-                </div>
-              </td>
+                    {hasDoubleStatus && (
+                      <StatusIcon
+                        status={status2!}
+                        tooltip={getStatusTooltip(status2!)}
+                        onClick={status2 === 'pending' ? () => handlePendingClick(client.name, column.label) : undefined}
+                      />
+                    )}
+                  </div>
+                </td>
+              </React.Fragment>
             );
           })}
         </tr>

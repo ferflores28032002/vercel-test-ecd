@@ -14,9 +14,10 @@ export const mockSubcuentas: SubcuentaData[] = [
       pml_mtr: { status: 'success', lastUpdate: '2025-12-12 10:30', executedBy: 'Fernando Ruiz' },
       ecd_dataset: { status: 'pending', executedBy: 'Carlos García' },
       ecyp: { status: 'success', lastUpdate: '2025-12-12 10:30', executedBy: 'Patricia Sánchez' },
-      tablas_mem: { status: 'in-progress', lastUpdate: '2025-12-12 11:15', executedBy: 'Jorge Ramírez' },
-      validacion: { status: 'success', status2: 'in-progress', lastUpdate: '2025-12-12 10:30', executedBy: 'María López', executedBy2: 'Carlos García' },
-      revision: { status: 'error', lastUpdate: '2025-12-12 08:20', executedBy: 'Fernando Ruiz' },
+      seg_med: { status: 'pending' }, check_oferta: { status: 'success' }, tablas_mem: { status: 'in-progress', lastUpdate: '2025-12-12 11:15', executedBy: 'Jorge Ramírez' },
+      validacion: { status: 'success', lastUpdate: '2025-12-12 10:30', executedBy: 'María López' },
+      vobo_mensual: { status: 'error', lastUpdate: '2025-12-12 08:20', executedBy: 'Fernando Ruiz' },
+      revision: { status: 'success' },
     },
     clients: [
       {
@@ -24,8 +25,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'success' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
           pml_mda: { status: 'success' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'success' },
-          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
-          validacion: { status: 'success', status2: 'success' },          revision: { status: 'success', status2: 'success' },
+          ecyp: { status: 'success' }, seg_med: { status: 'success' }, check_oferta: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success' },          vobo_mensual: { status: 'success' },
+          revision: { status: 'success' },
         },
       },
       {
@@ -33,8 +35,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'success' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
           pml_mda: { status: 'success' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'success' },
-          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
-          validacion: { status: 'success', status2: 'success' },          revision: { status: 'success', status2: 'in-progress' },
+          ecyp: { status: 'success' }, seg_med: { status: 'pending' }, check_oferta: { status: 'pending' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success' },          vobo_mensual: { status: 'success' },
+          revision: { status: 'success' },
         },
       },
       {
@@ -42,8 +45,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'success' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
           pml_mda: { status: 'success' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'success' },
-          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
-          validacion: { status: 'success', status2: 'success' },          revision: { status: 'success', status2: 'success' },
+          ecyp: { status: 'success' }, seg_med: { status: 'error' }, check_oferta: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success' },          vobo_mensual: { status: 'success' },
+          revision: { status: 'success' },
         },
       },
       {
@@ -51,8 +55,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'success' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
           pml_mda: { status: 'success' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'success' },
-          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
-          validacion: { status: 'success', status2: 'success' },          revision: { status: 'success', status2: 'success' },
+          ecyp: { status: 'success' }, seg_med: { status: 'success' }, check_oferta: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success' },          vobo_mensual: { status: 'success' },
+          revision: { status: 'error' },
         },
       },
       {
@@ -60,8 +65,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'success' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
           pml_mda: { status: 'success' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'success' },
-          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
-          validacion: { status: 'success', status2: 'success' },          revision: { status: 'success', status2: 'in-progress' },
+          ecyp: { status: 'success' }, seg_med: { status: 'success' }, check_oferta: { status: 'pending' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success' },          vobo_mensual: { status: 'success' },
+          revision: { status: 'success' },
         },
       },
     ],
@@ -79,9 +85,10 @@ export const mockSubcuentas: SubcuentaData[] = [
       pml_mtr: { status: 'error', lastUpdate: '2025-12-12 08:45', executedBy: 'Fernando Ruiz' },
       ecd_dataset: { status: 'in-progress', lastUpdate: '2025-12-12 09:20', executedBy: 'Ana Martínez' },
       ecyp: { status: 'success', lastUpdate: '2025-12-12 07:50', executedBy: 'Roberto Hernández' },
-      tablas_mem: { status: 'pending', executedBy: 'Patricia Sánchez' },
-      validacion: { status: 'success', status2: 'error', lastUpdate: '2025-12-12 08:10', executedBy: 'Jorge Ramírez', executedBy2: 'Ana Martínez' },
-      revision: { status: 'error', status2: 'pending', lastUpdate: '2025-12-12 07:30', executedBy: 'Ana Martínez', executedBy2: 'Patricia Sánchez' },
+      seg_med: { status: 'success' }, check_oferta: { status: 'success' }, tablas_mem: { status: 'pending', executedBy: 'Patricia Sánchez' },
+      validacion: { status: 'success', lastUpdate: '2025-12-12 08:10', executedBy: 'Jorge Ramírez' },
+      vobo_mensual: { status: 'error', lastUpdate: '2025-12-12 07:30', executedBy: 'Ana Martínez' },
+      revision: { status: 'success' },
     },
     clients: [
       {
@@ -89,8 +96,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'in-progress' }, oferta: { status: 'error' }, asignacion: { status: 'success' },
           pml_mda: { status: 'pending' }, pml_mtr: { status: 'error' }, ecd_dataset: { status: 'in-progress' },
-          ecyp: { status: 'success' }, tablas_mem: { status: 'pending' },
-          validacion: { status: 'success', status2: 'error' },          revision: { status: 'error', status2: 'pending' },
+          ecyp: { status: 'success' }, seg_med: { status: 'pending' }, check_oferta: { status: 'pending' }, tablas_mem: { status: 'pending' },
+          validacion: { status: 'success' },          vobo_mensual: { status: 'error' },
+          revision: { status: 'pending' },
         },
       },
       {
@@ -98,8 +106,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'success' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
           pml_mda: { status: 'success' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'success' },
-          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
-          validacion: { status: 'success', status2: 'success' },          revision: { status: 'success', status2: 'success' },
+          ecyp: { status: 'success' }, seg_med: { status: 'success' }, check_oferta: { status: 'pending' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success' },          vobo_mensual: { status: 'success' },
+          revision: { status: 'pending' },
         },
       },
       {
@@ -107,8 +116,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'pending' }, oferta: { status: 'pending' }, asignacion: { status: 'pending' },
           pml_mda: { status: 'pending' }, pml_mtr: { status: 'pending' }, ecd_dataset: { status: 'pending' },
-          ecyp: { status: 'pending' }, tablas_mem: { status: 'pending' },
-          validacion: { status: 'pending', status2: 'pending' },          revision: { status: 'pending', status2: 'pending' },
+          ecyp: { status: 'pending' }, seg_med: { status: 'error' }, check_oferta: { status: 'success' }, tablas_mem: { status: 'pending' },
+          validacion: { status: 'pending' },          vobo_mensual: { status: 'pending' },
+          revision: { status: 'in-progress' },
         },
       },
     ],
@@ -126,9 +136,10 @@ export const mockSubcuentas: SubcuentaData[] = [
       pml_mtr: { status: 'error', lastUpdate: '2025-12-12 09:10', executedBy: 'Carlos García' },
       ecd_dataset: { status: 'success', lastUpdate: '2025-12-12 10:15', executedBy: 'María López' },
       ecyp: { status: 'pending', executedBy: 'Ana Martínez' },
-      tablas_mem: { status: 'success', lastUpdate: '2025-12-12 10:20', executedBy: 'Roberto Hernández' },
-      validacion: { status: 'in-progress', status2: 'success', lastUpdate: '2025-12-12 10:50', executedBy: 'Fernando Ruiz', executedBy2: 'Jorge Ramírez' },
-      revision: { status: 'pending', status2: 'in-progress', executedBy: 'Carlos García', executedBy2: 'María López' },
+      seg_med: { status: 'error' }, check_oferta: { status: 'pending' }, tablas_mem: { status: 'success', lastUpdate: '2025-12-12 10:20', executedBy: 'Roberto Hernández' },
+      validacion: { status: 'in-progress', lastUpdate: '2025-12-12 10:50', executedBy: 'Fernando Ruiz' },
+      vobo_mensual: { status: 'pending', executedBy: 'Carlos García' },
+      revision: { status: 'success' },
     },
     clients: [
       {
@@ -136,8 +147,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'success' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
           pml_mda: { status: 'success' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'success' },
-          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
-          validacion: { status: 'success', status2: 'success' },          revision: { status: 'success', status2: 'success' },
+          ecyp: { status: 'success' }, seg_med: { status: 'success' }, check_oferta: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success' },          vobo_mensual: { status: 'success' },
+          revision: { status: 'success' },
         },
       },
       {
@@ -145,8 +157,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'success' }, oferta: { status: 'pending' }, asignacion: { status: 'success' },
           pml_mda: { status: 'success' }, pml_mtr: { status: 'pending' }, ecd_dataset: { status: 'success' },
-          ecyp: { status: 'success' }, tablas_mem: { status: 'pending' },
-          validacion: { status: 'success', status2: 'pending' },          revision: { status: 'success', status2: 'pending' },
+          ecyp: { status: 'success' }, seg_med: { status: 'in-progress' }, check_oferta: { status: 'success' }, tablas_mem: { status: 'pending' },
+          validacion: { status: 'success' },          vobo_mensual: { status: 'success' },
+          revision: { status: 'pending' },
         },
       },
       {
@@ -154,8 +167,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'success' }, oferta: { status: 'error' }, asignacion: { status: 'success' },
           pml_mda: { status: 'in-progress' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'success' },
-          ecyp: { status: 'pending' }, tablas_mem: { status: 'success' },
-          validacion: { status: 'error', status2: 'success' },          revision: { status: 'in-progress', status2: 'success' },
+          ecyp: { status: 'pending' }, seg_med: { status: 'success' }, check_oferta: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'error' },          vobo_mensual: { status: 'in-progress' },
+          revision: { status: 'success' },
         },
       },
     ],
@@ -173,9 +187,10 @@ export const mockSubcuentas: SubcuentaData[] = [
       pml_mtr: { status: 'in-progress', executedBy: 'Patricia Sánchez' },
       ecd_dataset: { status: 'pending', executedBy: 'Carlos García' },
       ecyp: { status: 'pending', executedBy: 'Roberto Hernández' },
-      tablas_mem: { status: 'pending', executedBy: 'María López' },
-      validacion: { status: 'pending', status2: 'pending', executedBy: 'Ana Martínez', executedBy2: 'Fernando Ruiz' },
-      revision: { status: 'pending', status2: 'pending', executedBy: 'Patricia Sánchez', executedBy2: 'Jorge Ramírez' },
+      seg_med: { status: 'error' }, check_oferta: { status: 'pending' }, tablas_mem: { status: 'pending', executedBy: 'María López' },
+      validacion: { status: 'pending', executedBy: 'Ana Martínez' },
+      vobo_mensual: { status: 'pending', executedBy: 'Patricia Sánchez' },
+      revision: { status: 'in-progress' },
     },
     clients: [
       {
@@ -183,8 +198,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'in-progress' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
           pml_mda: { status: 'success' }, pml_mtr: { status: 'in-progress' }, ecd_dataset: { status: 'success' },
-          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
-          validacion: { status: 'success', status2: 'in-progress' },          revision: { status: 'success', status2: 'success' },
+          ecyp: { status: 'success' }, seg_med: { status: 'error' }, check_oferta: { status: 'pending' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success' },          vobo_mensual: { status: 'success' },
+          revision: { status: 'success' },
         },
       },
       {
@@ -192,8 +208,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'pending' }, oferta: { status: 'pending' }, asignacion: { status: 'success' },
           pml_mda: { status: 'pending' }, pml_mtr: { status: 'pending' }, ecd_dataset: { status: 'pending' },
-          ecyp: { status: 'success' }, tablas_mem: { status: 'pending' },
-          validacion: { status: 'pending', status2: 'pending' },          revision: { status: 'pending', status2: 'pending' },
+          ecyp: { status: 'success' }, seg_med: { status: 'pending' }, check_oferta: { status: 'in-progress' }, tablas_mem: { status: 'pending' },
+          validacion: { status: 'pending' },          vobo_mensual: { status: 'pending' },
+          revision: { status: 'success' },
         },
       },
     ],
@@ -211,9 +228,10 @@ export const mockSubcuentas: SubcuentaData[] = [
       pml_mtr: { status: 'success', executedBy: 'Fernando Ruiz' },
       ecd_dataset: { status: 'success', executedBy: 'Patricia Sánchez' },
       ecyp: { status: 'success', executedBy: 'Jorge Ramírez' },
-      tablas_mem: { status: 'success', executedBy: 'Carlos García' },
-      validacion: { status: 'success', status2: 'success', executedBy: 'María López', executedBy2: 'Roberto Hernández' },
-      revision: { status: 'success', status2: 'success', executedBy: 'Fernando Ruiz', executedBy2: 'Ana Martínez' },
+      seg_med: { status: 'success' }, check_oferta: { status: 'pending' }, tablas_mem: { status: 'success', executedBy: 'Carlos García' },
+      validacion: { status: 'success', executedBy: 'María López' },
+      vobo_mensual: { status: 'success', executedBy: 'Fernando Ruiz' },
+      revision: { status: 'pending' },
     },
     clients: [
       {
@@ -221,8 +239,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'error' }, oferta: { status: 'success' }, asignacion: { status: 'error' },
           pml_mda: { status: 'success' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'error' },
-          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
-          validacion: { status: 'error', status2: 'success' },          revision: { status: 'success', status2: 'error' },
+          ecyp: { status: 'success' }, seg_med: { status: 'error' }, check_oferta: { status: 'pending' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'error' },          vobo_mensual: { status: 'success' },
+          revision: { status: 'success' },
         },
       },
       {
@@ -230,8 +249,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'success' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
           pml_mda: { status: 'success' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'success' },
-          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
-          validacion: { status: 'success', status2: 'success' },          revision: { status: 'success', status2: 'success' },
+          ecyp: { status: 'success' }, seg_med: { status: 'error' }, check_oferta: { status: 'pending' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success' },          vobo_mensual: { status: 'success' },
+          revision: { status: 'pending' },
         },
       },
       {
@@ -239,8 +259,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'in-progress' }, oferta: { status: 'in-progress' }, asignacion: { status: 'success' },
           pml_mda: { status: 'success' }, pml_mtr: { status: 'in-progress' }, ecd_dataset: { status: 'success' },
-          ecyp: { status: 'in-progress' }, tablas_mem: { status: 'success' },
-          validacion: { status: 'in-progress', status2: 'success' },          revision: { status: 'in-progress', status2: 'success' },
+          ecyp: { status: 'in-progress' }, seg_med: { status: 'pending' }, check_oferta: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'in-progress' },          vobo_mensual: { status: 'in-progress' },
+          revision: { status: 'error' },
         },
       },
       {
@@ -248,8 +269,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'success' }, oferta: { status: 'error' }, asignacion: { status: 'success' },
           pml_mda: { status: 'pending' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'in-progress' },
-          ecyp: { status: 'success' }, tablas_mem: { status: 'error' },
-          validacion: { status: 'success', status2: 'pending' },          revision: { status: 'in-progress', status2: 'success' },
+          ecyp: { status: 'success' }, seg_med: { status: 'success' }, check_oferta: { status: 'success' }, tablas_mem: { status: 'error' },
+          validacion: { status: 'success' },          vobo_mensual: { status: 'in-progress' },
+          revision: { status: 'success' },
         },
       },
     ],
@@ -267,9 +289,10 @@ export const mockSubcuentas: SubcuentaData[] = [
       pml_mtr: { status: 'success', executedBy: 'Carlos García' },
       ecd_dataset: { status: 'success', executedBy: 'Roberto Hernández' },
       ecyp: { status: 'success', executedBy: 'María López' },
-      tablas_mem: { status: 'success', executedBy: 'Jorge Ramírez' },
-      validacion: { status: 'success', status2: 'success', executedBy: 'Patricia Sánchez', executedBy2: 'Carlos García' },
-      revision: { status: 'success', status2: 'success', executedBy: 'María López', executedBy2: 'Jorge Ramírez' },
+      seg_med: { status: 'success' }, check_oferta: { status: 'success' }, tablas_mem: { status: 'success', executedBy: 'Jorge Ramírez' },
+      validacion: { status: 'success', executedBy: 'Patricia Sánchez' },
+      vobo_mensual: { status: 'success', executedBy: 'María López' },
+      revision: { status: 'in-progress' },
     },
     clients: [
       {
@@ -277,8 +300,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'success' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
           pml_mda: { status: 'success' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'success' },
-          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
-          validacion: { status: 'success', status2: 'success' },          revision: { status: 'success', status2: 'success' },
+          ecyp: { status: 'success' }, seg_med: { status: 'success' }, check_oferta: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success' },          vobo_mensual: { status: 'success' },
+          revision: { status: 'pending' },
         },
       },
       {
@@ -286,8 +310,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'success' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
           pml_mda: { status: 'success' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'success' },
-          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
-          validacion: { status: 'success', status2: 'success' },          revision: { status: 'success', status2: 'success' },
+          ecyp: { status: 'success' }, seg_med: { status: 'pending' }, check_oferta: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success' },          vobo_mensual: { status: 'success' },
+          revision: { status: 'error' },
         },
       },
       {
@@ -295,8 +320,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'success' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
           pml_mda: { status: 'success' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'success' },
-          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
-          validacion: { status: 'success', status2: 'success' },          revision: { status: 'success', status2: 'success' },
+          ecyp: { status: 'success' }, seg_med: { status: 'success' }, check_oferta: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success' },          vobo_mensual: { status: 'success' },
+          revision: { status: 'success' },
         },
       },
       {
@@ -304,8 +330,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'success' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
           pml_mda: { status: 'success' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'success' },
-          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
-          validacion: { status: 'success', status2: 'success' },          revision: { status: 'success', status2: 'success' },
+          ecyp: { status: 'success' }, seg_med: { status: 'success' }, check_oferta: { status: 'in-progress' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success' },          vobo_mensual: { status: 'success' },
+          revision: { status: 'success' },
         },
       },
       {
@@ -313,8 +340,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'success' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
           pml_mda: { status: 'success' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'success' },
-          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
-          validacion: { status: 'success', status2: 'success' },          revision: { status: 'success', status2: 'in-progress' },
+          ecyp: { status: 'success' }, seg_med: { status: 'pending' }, check_oferta: { status: 'pending' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success' },          vobo_mensual: { status: 'success' },
+          revision: { status: 'success' },
         },
       },
     ],
@@ -332,9 +360,10 @@ export const mockSubcuentas: SubcuentaData[] = [
       pml_mtr: { status: 'success', lastUpdate: '2025-12-12 07:55', executedBy: 'Luis Mendoza' },
       ecd_dataset: { status: 'error', lastUpdate: '2025-12-12 08:00', executedBy: 'Sandra Torres' },
       ecyp: { status: 'success', lastUpdate: '2025-12-12 07:40', executedBy: 'Carlos García' },
-      tablas_mem: { status: 'pending', executedBy: 'Diego Flores' },
-      validacion: { status: 'success', status2: 'pending', lastUpdate: '2025-12-12 07:50', executedBy: 'María López', executedBy2: 'Diego Flores' },
-      revision: { status: 'pending', status2: 'error', executedBy: 'Ana Martínez', executedBy2: 'Luis Mendoza' },
+      seg_med: { status: 'success' }, check_oferta: { status: 'pending' }, tablas_mem: { status: 'pending', executedBy: 'Diego Flores' },
+      validacion: { status: 'success', lastUpdate: '2025-12-12 07:50', executedBy: 'María López' },
+      vobo_mensual: { status: 'pending', executedBy: 'Ana Martínez' },
+      revision: { status: 'success' },
     },
     clients: [
       {
@@ -342,8 +371,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'success' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
           pml_mda: { status: 'success' }, pml_mtr: { status: 'error' }, ecd_dataset: { status: 'success' },
-          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
-          validacion: { status: 'success', status2: 'success' },          revision: { status: 'success', status2: 'success' },
+          ecyp: { status: 'success' }, seg_med: { status: 'success' }, check_oferta: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success' },          vobo_mensual: { status: 'success' },
+          revision: { status: 'success' },
         },
       },
       {
@@ -351,8 +381,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'success' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
           pml_mda: { status: 'success' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'success' },
-          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
-          validacion: { status: 'success', status2: 'success' },          revision: { status: 'success', status2: 'success' },
+          ecyp: { status: 'success' }, seg_med: { status: 'in-progress' }, check_oferta: { status: 'pending' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success' },          vobo_mensual: { status: 'success' },
+          revision: { status: 'in-progress' },
         },
       },
       {
@@ -360,8 +391,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'success' }, oferta: { status: 'pending' }, asignacion: { status: 'success' },
           pml_mda: { status: 'success' }, pml_mtr: { status: 'pending' }, ecd_dataset: { status: 'success' },
-          ecyp: { status: 'success' }, tablas_mem: { status: 'pending' },
-          validacion: { status: 'success', status2: 'pending' },          revision: { status: 'success', status2: 'pending' },
+          ecyp: { status: 'success' }, seg_med: { status: 'pending' }, check_oferta: { status: 'pending' }, tablas_mem: { status: 'pending' },
+          validacion: { status: 'success' },          vobo_mensual: { status: 'success' },
+          revision: { status: 'pending' },
         },
       },
     ],
@@ -379,9 +411,10 @@ export const mockSubcuentas: SubcuentaData[] = [
       pml_mtr: { status: 'pending', executedBy: 'Sandra Torres' },
       ecd_dataset: { status: 'success', lastUpdate: '2025-12-12 08:45', executedBy: 'Diego Flores' },
       ecyp: { status: 'error', lastUpdate: '2025-12-12 07:15', executedBy: 'Gabriela Ríos' },
-      tablas_mem: { status: 'in-progress', lastUpdate: '2025-12-12 09:10', executedBy: 'Carlos García' },
-      validacion: { status: 'pending', status2: 'error', executedBy: 'María López', executedBy2: 'Sandra Torres' },
-      revision: { status: 'in-progress', status2: 'success', lastUpdate: '2025-12-12 09:20', executedBy: 'Roberto Hernández', executedBy2: 'Gabriela Ríos' },
+      seg_med: { status: 'error' }, check_oferta: { status: 'error' }, tablas_mem: { status: 'in-progress', lastUpdate: '2025-12-12 09:10', executedBy: 'Carlos García' },
+      validacion: { status: 'pending', executedBy: 'María López' },
+      vobo_mensual: { status: 'in-progress', lastUpdate: '2025-12-12 09:20', executedBy: 'Roberto Hernández' },
+      revision: { status: 'success' },
     },
     clients: [
       {
@@ -389,8 +422,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'success' }, oferta: { status: 'error' }, asignacion: { status: 'success' },
           pml_mda: { status: 'in-progress' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'success' },
-          ecyp: { status: 'pending' }, tablas_mem: { status: 'success' },
-          validacion: { status: 'error', status2: 'success' },          revision: { status: 'in-progress', status2: 'success' },
+          ecyp: { status: 'pending' }, seg_med: { status: 'success' }, check_oferta: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'error' },          vobo_mensual: { status: 'in-progress' },
+          revision: { status: 'in-progress' },
         },
       },
       {
@@ -398,8 +432,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'in-progress' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
           pml_mda: { status: 'success' }, pml_mtr: { status: 'in-progress' }, ecd_dataset: { status: 'success' },
-          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
-          validacion: { status: 'success', status2: 'in-progress' },          revision: { status: 'success', status2: 'success' },
+          ecyp: { status: 'success' }, seg_med: { status: 'success' }, check_oferta: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success' },          vobo_mensual: { status: 'success' },
+          revision: { status: 'pending' },
         },
       },
     ],
@@ -417,9 +452,10 @@ export const mockSubcuentas: SubcuentaData[] = [
       pml_mtr: { status: 'success', lastUpdate: '2025-12-12 10:20', executedBy: 'Patricia Sánchez' },
       ecd_dataset: { status: 'success', lastUpdate: '2025-12-12 10:25', executedBy: 'Jorge Ramírez' },
       ecyp: { status: 'success', lastUpdate: '2025-12-12 10:30', executedBy: 'Carlos García' },
-      tablas_mem: { status: 'success', lastUpdate: '2025-12-12 10:35', executedBy: 'María López' },
-      validacion: { status: 'success', status2: 'success', lastUpdate: '2025-12-12 10:40', executedBy: 'Fernando Ruiz', executedBy2: 'Diego Flores' },
-      revision: { status: 'success', status2: 'success', lastUpdate: '2025-12-12 10:55', executedBy: 'Sandra Torres', executedBy2: 'Gabriela Ríos' },
+      seg_med: { status: 'success' }, check_oferta: { status: 'in-progress' }, tablas_mem: { status: 'success', lastUpdate: '2025-12-12 10:35', executedBy: 'María López' },
+      validacion: { status: 'success', lastUpdate: '2025-12-12 10:40', executedBy: 'Fernando Ruiz' },
+      vobo_mensual: { status: 'success', lastUpdate: '2025-12-12 10:55', executedBy: 'Sandra Torres' },
+      revision: { status: 'in-progress' },
     },
     clients: [
       {
@@ -427,8 +463,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'pending' }, oferta: { status: 'pending' }, asignacion: { status: 'success' },
           pml_mda: { status: 'pending' }, pml_mtr: { status: 'pending' }, ecd_dataset: { status: 'pending' },
-          ecyp: { status: 'success' }, tablas_mem: { status: 'pending' },
-          validacion: { status: 'pending', status2: 'pending' },          revision: { status: 'pending', status2: 'pending' },
+          ecyp: { status: 'success' }, seg_med: { status: 'error' }, check_oferta: { status: 'success' }, tablas_mem: { status: 'pending' },
+          validacion: { status: 'pending' },          vobo_mensual: { status: 'pending' },
+          revision: { status: 'success' },
         },
       },
       {
@@ -436,8 +473,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'error' }, oferta: { status: 'success' }, asignacion: { status: 'error' },
           pml_mda: { status: 'success' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'error' },
-          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
-          validacion: { status: 'error', status2: 'success' },          revision: { status: 'success', status2: 'error' },
+          ecyp: { status: 'success' }, seg_med: { status: 'pending' }, check_oferta: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'error' },          vobo_mensual: { status: 'success' },
+          revision: { status: 'success' },
         },
       },
       {
@@ -445,8 +483,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'success' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
           pml_mda: { status: 'success' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'success' },
-          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
-          validacion: { status: 'success', status2: 'success' },          revision: { status: 'success', status2: 'success' },
+          ecyp: { status: 'success' }, seg_med: { status: 'in-progress' }, check_oferta: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success' },          vobo_mensual: { status: 'success' },
+          revision: { status: 'in-progress' },
         },
       },
       {
@@ -454,8 +493,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'in-progress' }, oferta: { status: 'in-progress' }, asignacion: { status: 'success' },
           pml_mda: { status: 'success' }, pml_mtr: { status: 'in-progress' }, ecd_dataset: { status: 'success' },
-          ecyp: { status: 'in-progress' }, tablas_mem: { status: 'success' },
-          validacion: { status: 'in-progress', status2: 'success' },          revision: { status: 'in-progress', status2: 'success' },
+          ecyp: { status: 'in-progress' }, seg_med: { status: 'success' }, check_oferta: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'in-progress' },          vobo_mensual: { status: 'in-progress' },
+          revision: { status: 'success' },
         },
       },
     ],
@@ -473,9 +513,10 @@ export const mockSubcuentas: SubcuentaData[] = [
       pml_mtr: { status: 'in-progress', lastUpdate: '2025-12-12 11:05', executedBy: 'Carlos García' },
       ecd_dataset: { status: 'pending', executedBy: 'Patricia Sánchez' },
       ecyp: { status: 'pending', executedBy: 'Jorge Ramírez' },
-      tablas_mem: { status: 'pending', executedBy: 'Diego Flores' },
-      validacion: { status: 'pending', status2: 'pending', executedBy: 'Gabriela Ríos', executedBy2: 'Luis Mendoza' },
-      revision: { status: 'pending', status2: 'pending', executedBy: 'Fernando Ruiz', executedBy2: 'Sandra Torres' },
+      seg_med: { status: 'pending' }, check_oferta: { status: 'success' }, tablas_mem: { status: 'pending', executedBy: 'Diego Flores' },
+      validacion: { status: 'pending', executedBy: 'Gabriela Ríos' },
+      vobo_mensual: { status: 'pending', executedBy: 'Fernando Ruiz' },
+      revision: { status: 'error' },
     },
     clients: [
       {
@@ -483,8 +524,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'success' }, oferta: { status: 'error' }, asignacion: { status: 'success' },
           pml_mda: { status: 'pending' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'in-progress' },
-          ecyp: { status: 'success' }, tablas_mem: { status: 'error' },
-          validacion: { status: 'success', status2: 'pending' },          revision: { status: 'in-progress', status2: 'success' },
+          ecyp: { status: 'success' }, seg_med: { status: 'pending' }, check_oferta: { status: 'error' }, tablas_mem: { status: 'error' },
+          validacion: { status: 'success' },          vobo_mensual: { status: 'in-progress' },
+          revision: { status: 'pending' },
         },
       },
       {
@@ -492,8 +534,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'success' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
           pml_mda: { status: 'success' }, pml_mtr: { status: 'error' }, ecd_dataset: { status: 'success' },
-          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
-          validacion: { status: 'success', status2: 'success' },          revision: { status: 'success', status2: 'success' },
+          ecyp: { status: 'success' }, seg_med: { status: 'success' }, check_oferta: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success' },          vobo_mensual: { status: 'success' },
+          revision: { status: 'in-progress' },
         },
       },
       {
@@ -501,8 +544,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'success' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
           pml_mda: { status: 'success' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'success' },
-          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
-          validacion: { status: 'success', status2: 'success' },          revision: { status: 'success', status2: 'success' },
+          ecyp: { status: 'success' }, seg_med: { status: 'in-progress' }, check_oferta: { status: 'pending' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success' },          vobo_mensual: { status: 'success' },
+          revision: { status: 'in-progress' },
         },
       },
     ],
@@ -520,9 +564,10 @@ export const mockSubcuentas: SubcuentaData[] = [
       pml_mtr: { status: 'in-progress', lastUpdate: '2025-12-12 09:40', executedBy: 'Roberto Hernández' },
       ecd_dataset: { status: 'success', lastUpdate: '2025-12-12 09:15', executedBy: 'Patricia Sánchez' },
       ecyp: { status: 'pending', executedBy: 'Jorge Ramírez' },
-      tablas_mem: { status: 'success', lastUpdate: '2025-12-12 09:20', executedBy: 'Ana Martínez' },
-      validacion: { status: 'error', status2: 'success', lastUpdate: '2025-12-12 08:15', executedBy: 'Carlos García', executedBy2: 'Patricia Sánchez' },
-      revision: { status: 'success', status2: 'error', lastUpdate: '2025-12-12 09:30', executedBy: 'Gabriela Ríos', executedBy2: 'Luis Mendoza' },
+      seg_med: { status: 'success' }, check_oferta: { status: 'success' }, tablas_mem: { status: 'success', lastUpdate: '2025-12-12 09:20', executedBy: 'Ana Martínez' },
+      validacion: { status: 'error', lastUpdate: '2025-12-12 08:15', executedBy: 'Carlos García' },
+      vobo_mensual: { status: 'success', lastUpdate: '2025-12-12 09:30', executedBy: 'Gabriela Ríos' },
+      revision: { status: 'pending' },
     },
     clients: [
       {
@@ -530,8 +575,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'success' }, oferta: { status: 'pending' }, asignacion: { status: 'success' },
           pml_mda: { status: 'success' }, pml_mtr: { status: 'pending' }, ecd_dataset: { status: 'success' },
-          ecyp: { status: 'success' }, tablas_mem: { status: 'pending' },
-          validacion: { status: 'success', status2: 'pending' },          revision: { status: 'success', status2: 'pending' },
+          ecyp: { status: 'success' }, seg_med: { status: 'success' }, check_oferta: { status: 'pending' }, tablas_mem: { status: 'pending' },
+          validacion: { status: 'success' },          vobo_mensual: { status: 'success' },
+          revision: { status: 'success' },
         },
       },
       {
@@ -539,8 +585,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'success' }, oferta: { status: 'error' }, asignacion: { status: 'success' },
           pml_mda: { status: 'in-progress' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'success' },
-          ecyp: { status: 'pending' }, tablas_mem: { status: 'success' },
-          validacion: { status: 'error', status2: 'success' },          revision: { status: 'in-progress', status2: 'success' },
+          ecyp: { status: 'pending' }, seg_med: { status: 'error' }, check_oferta: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'error' },          vobo_mensual: { status: 'in-progress' },
+          revision: { status: 'success' },
         },
       },
     ],
@@ -558,9 +605,10 @@ export const mockSubcuentas: SubcuentaData[] = [
       pml_mtr: { status: 'success', lastUpdate: '2025-12-12 11:15', executedBy: 'Jorge Ramírez' },
       ecd_dataset: { status: 'in-progress', lastUpdate: '2025-12-12 11:30', executedBy: 'Luis Mendoza' },
       ecyp: { status: 'success', lastUpdate: '2025-12-12 11:20', executedBy: 'Sandra Torres' },
-      tablas_mem: { status: 'success', lastUpdate: '2025-12-12 11:25', executedBy: 'Diego Flores' },
-      validacion: { status: 'success', status2: 'in-progress', lastUpdate: '2025-12-12 11:30', executedBy: 'Gabriela Ríos', executedBy2: 'Diego Flores' },
-      revision: { status: 'success', status2: 'success', lastUpdate: '2025-12-12 11:40', executedBy: 'Ana Martínez', executedBy2: 'Roberto Hernández' },
+      seg_med: { status: 'success' }, check_oferta: { status: 'success' }, tablas_mem: { status: 'success', lastUpdate: '2025-12-12 11:25', executedBy: 'Diego Flores' },
+      validacion: { status: 'success', lastUpdate: '2025-12-12 11:30', executedBy: 'Gabriela Ríos' },
+      vobo_mensual: { status: 'success', lastUpdate: '2025-12-12 11:40', executedBy: 'Ana Martínez' },
+      revision: { status: 'success' },
     },
     clients: [
       {
@@ -568,8 +616,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'in-progress' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
           pml_mda: { status: 'success' }, pml_mtr: { status: 'in-progress' }, ecd_dataset: { status: 'success' },
-          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
-          validacion: { status: 'success', status2: 'in-progress' },          revision: { status: 'success', status2: 'success' },
+          ecyp: { status: 'success' }, seg_med: { status: 'in-progress' }, check_oferta: { status: 'pending' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success' },          vobo_mensual: { status: 'success' },
+          revision: { status: 'error' },
         },
       },
       {
@@ -577,8 +626,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'pending' }, oferta: { status: 'pending' }, asignacion: { status: 'success' },
           pml_mda: { status: 'pending' }, pml_mtr: { status: 'pending' }, ecd_dataset: { status: 'pending' },
-          ecyp: { status: 'success' }, tablas_mem: { status: 'pending' },
-          validacion: { status: 'pending', status2: 'pending' },          revision: { status: 'pending', status2: 'pending' },
+          ecyp: { status: 'success' }, seg_med: { status: 'in-progress' }, check_oferta: { status: 'error' }, tablas_mem: { status: 'pending' },
+          validacion: { status: 'pending' },          vobo_mensual: { status: 'pending' },
+          revision: { status: 'success' },
         },
       },
       {
@@ -586,8 +636,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'error' }, oferta: { status: 'success' }, asignacion: { status: 'error' },
           pml_mda: { status: 'success' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'error' },
-          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
-          validacion: { status: 'error', status2: 'success' },          revision: { status: 'success', status2: 'error' },
+          ecyp: { status: 'success' }, seg_med: { status: 'success' }, check_oferta: { status: 'pending' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'error' },          vobo_mensual: { status: 'success' },
+          revision: { status: 'success' },
         },
       },
     ],
@@ -605,9 +656,10 @@ export const mockSubcuentas: SubcuentaData[] = [
       pml_mtr: { status: 'pending', executedBy: 'Roberto Hernández' },
       ecd_dataset: { status: 'in-progress', lastUpdate: '2025-12-12 10:40', executedBy: 'Patricia Sánchez' },
       ecyp: { status: 'pending', executedBy: 'Jorge Ramírez' },
-      tablas_mem: { status: 'error', lastUpdate: '2025-12-12 09:30', executedBy: 'Luis Mendoza' },
-      validacion: { status: 'pending', status2: 'error', executedBy: 'Sandra Torres', executedBy2: 'Ana Martínez' },
-      revision: { status: 'error', status2: 'pending', lastUpdate: '2025-12-12 09:15', executedBy: 'Carlos García', executedBy2: 'Fernando Ruiz' },
+      seg_med: { status: 'pending' }, check_oferta: { status: 'pending' }, tablas_mem: { status: 'error', lastUpdate: '2025-12-12 09:30', executedBy: 'Luis Mendoza' },
+      validacion: { status: 'pending', executedBy: 'Sandra Torres' },
+      vobo_mensual: { status: 'error', lastUpdate: '2025-12-12 09:15', executedBy: 'Carlos García' },
+      revision: { status: 'success' },
     },
     clients: [
       {
@@ -615,8 +667,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'success' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
           pml_mda: { status: 'success' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'success' },
-          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
-          validacion: { status: 'success', status2: 'success' },          revision: { status: 'success', status2: 'success' },
+          ecyp: { status: 'success' }, seg_med: { status: 'success' }, check_oferta: { status: 'pending' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success' },          vobo_mensual: { status: 'success' },
+          revision: { status: 'success' },
         },
       },
       {
@@ -624,8 +677,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'in-progress' }, oferta: { status: 'in-progress' }, asignacion: { status: 'success' },
           pml_mda: { status: 'success' }, pml_mtr: { status: 'in-progress' }, ecd_dataset: { status: 'success' },
-          ecyp: { status: 'in-progress' }, tablas_mem: { status: 'success' },
-          validacion: { status: 'in-progress', status2: 'success' },          revision: { status: 'in-progress', status2: 'success' },
+          ecyp: { status: 'in-progress' }, seg_med: { status: 'success' }, check_oferta: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'in-progress' },          vobo_mensual: { status: 'in-progress' },
+          revision: { status: 'success' },
         },
       },
       {
@@ -633,8 +687,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'success' }, oferta: { status: 'error' }, asignacion: { status: 'success' },
           pml_mda: { status: 'pending' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'in-progress' },
-          ecyp: { status: 'success' }, tablas_mem: { status: 'error' },
-          validacion: { status: 'success', status2: 'pending' },          revision: { status: 'in-progress', status2: 'success' },
+          ecyp: { status: 'success' }, seg_med: { status: 'success' }, check_oferta: { status: 'in-progress' }, tablas_mem: { status: 'error' },
+          validacion: { status: 'success' },          vobo_mensual: { status: 'in-progress' },
+          revision: { status: 'success' },
         },
       },
       {
@@ -642,8 +697,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'success' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
           pml_mda: { status: 'success' }, pml_mtr: { status: 'error' }, ecd_dataset: { status: 'success' },
-          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
-          validacion: { status: 'success', status2: 'success' },          revision: { status: 'success', status2: 'success' },
+          ecyp: { status: 'success' }, seg_med: { status: 'error' }, check_oferta: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success' },          vobo_mensual: { status: 'success' },
+          revision: { status: 'pending' },
         },
       },
     ],
@@ -661,9 +717,10 @@ export const mockSubcuentas: SubcuentaData[] = [
       pml_mtr: { status: 'success', lastUpdate: '2025-12-12 08:15', executedBy: 'Ana Martínez' },
       ecd_dataset: { status: 'success', lastUpdate: '2025-12-12 08:20', executedBy: 'Roberto Hernández' },
       ecyp: { status: 'success', lastUpdate: '2025-12-12 08:25', executedBy: 'Fernando Ruiz' },
-      tablas_mem: { status: 'success', lastUpdate: '2025-12-12 08:30', executedBy: 'Patricia Sánchez' },
-      validacion: { status: 'in-progress', status2: 'success', lastUpdate: '2025-12-12 08:45', executedBy: 'Jorge Ramírez', executedBy2: 'Luis Mendoza' },
-      revision: { status: 'success', status2: 'in-progress', lastUpdate: '2025-12-12 08:42', executedBy: 'Sandra Torres', executedBy2: 'Diego Flores' },
+      seg_med: { status: 'pending' }, check_oferta: { status: 'success' }, tablas_mem: { status: 'success', lastUpdate: '2025-12-12 08:30', executedBy: 'Patricia Sánchez' },
+      validacion: { status: 'in-progress', lastUpdate: '2025-12-12 08:45', executedBy: 'Jorge Ramírez' },
+      vobo_mensual: { status: 'success', lastUpdate: '2025-12-12 08:42', executedBy: 'Sandra Torres' },
+      revision: { status: 'success' },
     },
     clients: [
       {
@@ -671,8 +728,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'success' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
           pml_mda: { status: 'success' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'success' },
-          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
-          validacion: { status: 'success', status2: 'success' },          revision: { status: 'success', status2: 'success' },
+          ecyp: { status: 'success' }, seg_med: { status: 'in-progress' }, check_oferta: { status: 'error' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success' },          vobo_mensual: { status: 'success' },
+          revision: { status: 'error' },
         },
       },
       {
@@ -680,8 +738,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'success' }, oferta: { status: 'pending' }, asignacion: { status: 'success' },
           pml_mda: { status: 'success' }, pml_mtr: { status: 'pending' }, ecd_dataset: { status: 'success' },
-          ecyp: { status: 'success' }, tablas_mem: { status: 'pending' },
-          validacion: { status: 'success', status2: 'pending' },          revision: { status: 'success', status2: 'pending' },
+          ecyp: { status: 'success' }, seg_med: { status: 'success' }, check_oferta: { status: 'pending' }, tablas_mem: { status: 'pending' },
+          validacion: { status: 'success' },          vobo_mensual: { status: 'success' },
+          revision: { status: 'success' },
         },
       },
     ],
@@ -699,9 +758,10 @@ export const mockSubcuentas: SubcuentaData[] = [
       pml_mtr: { status: 'error', lastUpdate: '2025-12-12 06:45', executedBy: 'Ana Martínez' },
       ecd_dataset: { status: 'success', lastUpdate: '2025-12-12 07:20', executedBy: 'Roberto Hernández' },
       ecyp: { status: 'success', lastUpdate: '2025-12-12 07:25', executedBy: 'Patricia Sánchez' },
-      tablas_mem: { status: 'success', lastUpdate: '2025-12-12 07:30', executedBy: 'Luis Mendoza' },
-      validacion: { status: 'success', status2: 'success', lastUpdate: '2025-12-12 07:35', executedBy: 'Sandra Torres', executedBy2: 'Gabriela Ríos' },
-      revision: { status: 'success', status2: 'success', lastUpdate: '2025-12-12 07:50', executedBy: 'Jorge Ramírez', executedBy2: 'Patricia Sánchez' },
+      seg_med: { status: 'pending' }, check_oferta: { status: 'success' }, tablas_mem: { status: 'success', lastUpdate: '2025-12-12 07:30', executedBy: 'Luis Mendoza' },
+      validacion: { status: 'success', lastUpdate: '2025-12-12 07:35', executedBy: 'Sandra Torres' },
+      vobo_mensual: { status: 'success', lastUpdate: '2025-12-12 07:50', executedBy: 'Jorge Ramírez' },
+      revision: { status: 'success' },
     },
     clients: [
       {
@@ -709,8 +769,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'success' }, oferta: { status: 'error' }, asignacion: { status: 'success' },
           pml_mda: { status: 'in-progress' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'success' },
-          ecyp: { status: 'pending' }, tablas_mem: { status: 'success' },
-          validacion: { status: 'error', status2: 'success' },          revision: { status: 'in-progress', status2: 'success' },
+          ecyp: { status: 'pending' }, seg_med: { status: 'error' }, check_oferta: { status: 'pending' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'error' },          vobo_mensual: { status: 'in-progress' },
+          revision: { status: 'success' },
         },
       },
       {
@@ -718,8 +779,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'in-progress' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
           pml_mda: { status: 'success' }, pml_mtr: { status: 'in-progress' }, ecd_dataset: { status: 'success' },
-          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
-          validacion: { status: 'success', status2: 'in-progress' },          revision: { status: 'success', status2: 'success' },
+          ecyp: { status: 'success' }, seg_med: { status: 'error' }, check_oferta: { status: 'pending' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success' },          vobo_mensual: { status: 'success' },
+          revision: { status: 'success' },
         },
       },
       {
@@ -727,8 +789,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'pending' }, oferta: { status: 'pending' }, asignacion: { status: 'success' },
           pml_mda: { status: 'pending' }, pml_mtr: { status: 'pending' }, ecd_dataset: { status: 'pending' },
-          ecyp: { status: 'success' }, tablas_mem: { status: 'pending' },
-          validacion: { status: 'pending', status2: 'pending' },          revision: { status: 'pending', status2: 'pending' },
+          ecyp: { status: 'success' }, seg_med: { status: 'success' }, check_oferta: { status: 'success' }, tablas_mem: { status: 'pending' },
+          validacion: { status: 'pending' },          vobo_mensual: { status: 'pending' },
+          revision: { status: 'error' },
         },
       },
     ],
@@ -746,9 +809,10 @@ export const mockSubcuentas: SubcuentaData[] = [
       pml_mtr: { status: 'pending', executedBy: 'Carlos García' },
       ecd_dataset: { status: 'pending', executedBy: 'María López' },
       ecyp: { status: 'pending', executedBy: 'Fernando Ruiz' },
-      tablas_mem: { status: 'pending', executedBy: 'Ana Martínez' },
-      validacion: { status: 'pending', status2: 'pending', executedBy: 'Roberto Hernández', executedBy2: 'María López' },
-      revision: { status: 'pending', status2: 'pending', executedBy: 'Diego Flores', executedBy2: 'Carlos García' },
+      seg_med: { status: 'success' }, check_oferta: { status: 'in-progress' }, tablas_mem: { status: 'pending', executedBy: 'Ana Martínez' },
+      validacion: { status: 'pending', executedBy: 'Roberto Hernández' },
+      vobo_mensual: { status: 'pending', executedBy: 'Diego Flores' },
+      revision: { status: 'success' },
     },
     clients: [
       {
@@ -756,8 +820,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'error' }, oferta: { status: 'success' }, asignacion: { status: 'error' },
           pml_mda: { status: 'success' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'error' },
-          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
-          validacion: { status: 'error', status2: 'success' },          revision: { status: 'success', status2: 'error' },
+          ecyp: { status: 'success' }, seg_med: { status: 'error' }, check_oferta: { status: 'error' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'error' },          vobo_mensual: { status: 'success' },
+          revision: { status: 'pending' },
         },
       },
       {
@@ -765,8 +830,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'success' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
           pml_mda: { status: 'success' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'success' },
-          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
-          validacion: { status: 'success', status2: 'success' },          revision: { status: 'success', status2: 'success' },
+          ecyp: { status: 'success' }, seg_med: { status: 'success' }, check_oferta: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success' },          vobo_mensual: { status: 'success' },
+          revision: { status: 'in-progress' },
         },
       },
       {
@@ -774,8 +840,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'in-progress' }, oferta: { status: 'in-progress' }, asignacion: { status: 'success' },
           pml_mda: { status: 'success' }, pml_mtr: { status: 'in-progress' }, ecd_dataset: { status: 'success' },
-          ecyp: { status: 'in-progress' }, tablas_mem: { status: 'success' },
-          validacion: { status: 'in-progress', status2: 'success' },          revision: { status: 'in-progress', status2: 'success' },
+          ecyp: { status: 'in-progress' }, seg_med: { status: 'error' }, check_oferta: { status: 'in-progress' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'in-progress' },          vobo_mensual: { status: 'in-progress' },
+          revision: { status: 'success' },
         },
       },
       {
@@ -783,8 +850,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'success' }, oferta: { status: 'error' }, asignacion: { status: 'success' },
           pml_mda: { status: 'pending' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'in-progress' },
-          ecyp: { status: 'success' }, tablas_mem: { status: 'error' },
-          validacion: { status: 'success', status2: 'pending' },          revision: { status: 'in-progress', status2: 'success' },
+          ecyp: { status: 'success' }, seg_med: { status: 'success' }, check_oferta: { status: 'success' }, tablas_mem: { status: 'error' },
+          validacion: { status: 'success' },          vobo_mensual: { status: 'in-progress' },
+          revision: { status: 'error' },
         },
       },
     ],
@@ -802,9 +870,10 @@ export const mockSubcuentas: SubcuentaData[] = [
       pml_mtr: { status: 'success', lastUpdate: '2025-12-12 09:45', executedBy: 'Ana Martínez' },
       ecd_dataset: { status: 'success', lastUpdate: '2025-12-12 09:50', executedBy: 'Roberto Hernández' },
       ecyp: { status: 'in-progress', lastUpdate: '2025-12-12 10:05', executedBy: 'Fernando Ruiz' },
-      tablas_mem: { status: 'success', lastUpdate: '2025-12-12 09:55', executedBy: 'Patricia Sánchez' },
-      validacion: { status: 'success', status2: 'success', lastUpdate: '2025-12-12 10:00', executedBy: 'Jorge Ramírez', executedBy2: 'Ana Martínez' },
-      revision: { status: 'pending', status2: 'in-progress', executedBy: 'Luis Mendoza', executedBy2: 'Sandra Torres' },
+      seg_med: { status: 'success' }, check_oferta: { status: 'error' }, tablas_mem: { status: 'success', lastUpdate: '2025-12-12 09:55', executedBy: 'Patricia Sánchez' },
+      validacion: { status: 'success', lastUpdate: '2025-12-12 10:00', executedBy: 'Jorge Ramírez' },
+      vobo_mensual: { status: 'pending', executedBy: 'Luis Mendoza' },
+      revision: { status: 'pending' },
     },
     clients: [
       {
@@ -812,8 +881,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'success' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
           pml_mda: { status: 'success' }, pml_mtr: { status: 'error' }, ecd_dataset: { status: 'success' },
-          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
-          validacion: { status: 'success', status2: 'success' },          revision: { status: 'success', status2: 'success' },
+          ecyp: { status: 'success' }, seg_med: { status: 'error' }, check_oferta: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success' },          vobo_mensual: { status: 'success' },
+          revision: { status: 'pending' },
         },
       },
       {
@@ -821,8 +891,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'success' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
           pml_mda: { status: 'success' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'success' },
-          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
-          validacion: { status: 'success', status2: 'success' },          revision: { status: 'success', status2: 'success' },
+          ecyp: { status: 'success' }, seg_med: { status: 'success' }, check_oferta: { status: 'pending' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success' },          vobo_mensual: { status: 'success' },
+          revision: { status: 'pending' },
         },
       },
       {
@@ -830,8 +901,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'success' }, oferta: { status: 'pending' }, asignacion: { status: 'success' },
           pml_mda: { status: 'success' }, pml_mtr: { status: 'pending' }, ecd_dataset: { status: 'success' },
-          ecyp: { status: 'success' }, tablas_mem: { status: 'pending' },
-          validacion: { status: 'success', status2: 'pending' },          revision: { status: 'success', status2: 'pending' },
+          ecyp: { status: 'success' }, seg_med: { status: 'success' }, check_oferta: { status: 'error' }, tablas_mem: { status: 'pending' },
+          validacion: { status: 'success' },          vobo_mensual: { status: 'success' },
+          revision: { status: 'success' },
         },
       },
     ],
@@ -849,9 +921,10 @@ export const mockSubcuentas: SubcuentaData[] = [
       pml_mtr: { status: 'success', lastUpdate: '2025-12-12 11:45', executedBy: 'Carlos García' },
       ecd_dataset: { status: 'success', lastUpdate: '2025-12-12 11:50', executedBy: 'María López' },
       ecyp: { status: 'success', lastUpdate: '2025-12-12 11:55', executedBy: 'Fernando Ruiz' },
-      tablas_mem: { status: 'in-progress', lastUpdate: '2025-12-12 12:00', executedBy: 'Ana Martínez' },
-      validacion: { status: 'success', status2: 'error', lastUpdate: '2025-12-12 12:05', executedBy: 'Roberto Hernández', executedBy2: 'Fernando Ruiz' },
-      revision: { status: 'success', status2: 'in-progress', lastUpdate: '2025-12-12 12:15', executedBy: 'Gabriela Ríos', executedBy2: 'Diego Flores' },
+      seg_med: { status: 'success' }, check_oferta: { status: 'success' }, tablas_mem: { status: 'in-progress', lastUpdate: '2025-12-12 12:00', executedBy: 'Ana Martínez' },
+      validacion: { status: 'success', lastUpdate: '2025-12-12 12:05', executedBy: 'Roberto Hernández' },
+      vobo_mensual: { status: 'success', lastUpdate: '2025-12-12 12:15', executedBy: 'Gabriela Ríos' },
+      revision: { status: 'success' },
     },
     clients: [
       {
@@ -859,8 +932,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'success' }, oferta: { status: 'error' }, asignacion: { status: 'success' },
           pml_mda: { status: 'in-progress' }, pml_mtr: { status: 'success' }, ecd_dataset: { status: 'success' },
-          ecyp: { status: 'pending' }, tablas_mem: { status: 'success' },
-          validacion: { status: 'error', status2: 'success' },          revision: { status: 'in-progress', status2: 'success' },
+          ecyp: { status: 'pending' }, seg_med: { status: 'pending' }, check_oferta: { status: 'pending' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'error' },          vobo_mensual: { status: 'in-progress' },
+          revision: { status: 'success' },
         },
       },
       {
@@ -868,8 +942,9 @@ export const mockSubcuentas: SubcuentaData[] = [
         columns: {
           medicion: { status: 'in-progress' }, oferta: { status: 'success' }, asignacion: { status: 'success' },
           pml_mda: { status: 'success' }, pml_mtr: { status: 'in-progress' }, ecd_dataset: { status: 'success' },
-          ecyp: { status: 'success' }, tablas_mem: { status: 'success' },
-          validacion: { status: 'success', status2: 'in-progress' },          revision: { status: 'success', status2: 'success' },
+          ecyp: { status: 'success' }, seg_med: { status: 'success' }, check_oferta: { status: 'success' }, tablas_mem: { status: 'success' },
+          validacion: { status: 'success' },          vobo_mensual: { status: 'success' },
+          revision: { status: 'success' },
         },
       },
     ],
@@ -891,8 +966,20 @@ export const procesColumns = [
   { id: 'pml_mtr', label: 'PML MTR' },
   { id: 'ecd_dataset', label: 'ECD Dataset' },
   { id: 'ecyp', label: 'ECyP' },
-  { id: 'tablas_mem', label: 'Tablas MEM' },
-  { id: 'validacion', label: 'Validación' },
-
-{ id: 'revision', label: 'Revisión' },
+  { id: 'seg_med', label: 'Seg. de Med.' },
+  { id: 'check_oferta', label: 'Check Oferta' },
+  { id: 'tablas_mem', label: 'Calcular Tablas MEM' },
+  { id: 'validacion', label: 'Check de ECyP' },
+  { id: 'vobo_mensual', label: 'VoBo Mensual de Med.' },
+  { id: 'revision', label: 'Revisión' },
 ];
+
+export const columnGroups = [
+  { label: 'Carga de Datos', colspan: 7 },
+  { label: 'Ejecuciones', colspan: 3 },
+  { label: 'Validación', colspan: 2 },
+  { label: 'Revisión', colspan: 1 },
+];
+
+// Indices where a group separator should appear BEFORE the column
+export const groupSeparatorIndices = new Set([7, 10, 12]);
