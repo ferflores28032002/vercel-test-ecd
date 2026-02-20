@@ -3,9 +3,14 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Trash2, Play, ChevronDown } from 'lucide-react';
 import { ConfirmationModal } from '@/shared/components/ConfirmationModal/ConfirmationModal';
+import { validateSubcuentasForActions } from '../../utils/helpers';
+import type { ValidationResult } from '../../utils/helpers';
+import type { SubcuentaData } from '@/types/process';
 
 interface ActionsBarProps {
   selectedCount: number;
+  subcuentas: SubcuentaData[];
+  selectedIds: Set<string>;
   onExecute: () => void;
   onDelete: () => void;
 }
@@ -18,7 +23,7 @@ const AVAILABLE_ACTIONS = [
   'Revisión',
 ];
 
-export function ActionsBar({ selectedCount, onExecute, onDelete }: ActionsBarProps) {
+export function ActionsBar({ selectedCount, subcuentas, selectedIds, onExecute, onDelete }: ActionsBarProps) {
   const [showConfirmModal, setShowConfirmModal] = useState(false);
   const [modalAction, setModalAction] = useState<'execute' | 'delete'>('execute');
   const [isLoading, setIsLoading] = useState(false);
@@ -26,6 +31,7 @@ export function ActionsBar({ selectedCount, onExecute, onDelete }: ActionsBarPro
   const [showDeleteDropdown, setShowDeleteDropdown] = useState(false);
   const [selectedExecuteActions, setSelectedExecuteActions] = useState<Set<string>>(new Set());
   const [selectedDeleteActions, setSelectedDeleteActions] = useState<Set<string>>(new Set());
+  const [validationResults, setValidationResults] = useState<ValidationResult[]>([]);
   const executeDropdownRef = useRef<HTMLDivElement>(null);
   const deleteDropdownRef = useRef<HTMLDivElement>(null);
 
@@ -65,6 +71,8 @@ export function ActionsBar({ selectedCount, onExecute, onDelete }: ActionsBarPro
 
   const handleExecuteConfirm = () => {
     if (selectedExecuteActions.size > 0) {
+      const results = validateSubcuentasForActions(subcuentas, selectedIds, selectedExecuteActions, 'execute');
+      setValidationResults(results);
       setModalAction('execute');
       setShowConfirmModal(true);
       setShowExecuteDropdown(false);
@@ -73,6 +81,8 @@ export function ActionsBar({ selectedCount, onExecute, onDelete }: ActionsBarPro
 
   const handleDeleteConfirm = () => {
     if (selectedDeleteActions.size > 0) {
+      const results = validateSubcuentasForActions(subcuentas, selectedIds, selectedDeleteActions, 'delete');
+      setValidationResults(results);
       setModalAction('delete');
       setShowConfirmModal(true);
       setShowDeleteDropdown(false);
@@ -225,6 +235,7 @@ export function ActionsBar({ selectedCount, onExecute, onDelete }: ActionsBarPro
         onConfirm={handleConfirm}
         onCancel={() => setShowConfirmModal(false)}
         isLoading={isLoading}
+        validationResults={validationResults}
       />
     </>
   );

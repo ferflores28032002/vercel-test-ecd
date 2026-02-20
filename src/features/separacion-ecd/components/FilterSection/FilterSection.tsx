@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useMemo } from 'react';
-import { RotateCcw, Search, Info, Check, Clock, X, Zap, BarChart3, CalendarIcon } from 'lucide-react';
+import { RotateCcw, Search, Check, Clock, X, Zap, BarChart3, CalendarIcon } from 'lucide-react';
 import { format, parse } from 'date-fns';
 import { es } from 'date-fns/locale';
 import { SubcuentaData } from '@/types/process';
@@ -17,6 +17,7 @@ interface FilterSectionProps {
   onEndDateChange: (date: string) => void;
   onRefresh: () => void;
   subcuentas?: SubcuentaData[];
+  isRefreshing?: boolean;
 }
 
 const STATUS_CONFIG = [
@@ -33,8 +34,8 @@ export function FilterSection({
   onEndDateChange,
   onRefresh,
   subcuentas = [],
+  isRefreshing = false,
 }: FilterSectionProps) {
-  const [showLegend, setShowLegend] = useState(false);
   const [showDetailModal, setShowDetailModal] = useState(false);
   const [startOpen, setStartOpen] = useState(false);
   const [endOpen, setEndOpen] = useState(false);
@@ -157,8 +158,8 @@ export function FilterSection({
     <>
       <div className="bg-white rounded-lg border border-slate-200 p-5 relative">
         <div className="flex items-center justify-between gap-6">
-          {/* Left: Date Pickers */}
-          <div className="flex items-start gap-3 min-w-max">
+          {/* Left: Date Pickers + Refresh */}
+          <div className="flex items-end gap-3 min-w-max">
             <div className="flex flex-col gap-1">
               <label className="font-medium text-slate-500 text-xs">Inicio</label>
               <Popover open={startOpen} onOpenChange={setStartOpen}>
@@ -207,6 +208,17 @@ export function FilterSection({
                 </PopoverContent>
               </Popover>
             </div>
+            <button
+              onClick={onRefresh}
+              disabled={isRefreshing}
+              className="p-2 h-9 w-9 flex items-center justify-center text-[#e74038] rounded-md hover:bg-slate-100 transition-colors group relative disabled:opacity-60"
+              title="Actualizar datos"
+            >
+              <RotateCcw className={`w-4 h-4 ${isRefreshing ? 'animate-spin' : ''}`} />
+              <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-slate-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+                Actualizar
+              </div>
+            </button>
           </div>
 
           {/* Center: Donut Chart + Stats */}
@@ -262,89 +274,20 @@ export function FilterSection({
             </div>
           </div>
 
-          {/* Right: Search and Refresh */}
-          <div className="flex items-center gap-2 min-w-max">
-            <div className="relative max-w-xs">
+          {/* Right: Search */}
+          <div className="flex items-center min-w-max">
+            <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-slate-400" />
               <input
                 type="text"
-                placeholder="Buscar..."
-                className="pl-10 pr-4 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#e74038]/20 text-sm w-40"
+                placeholder="Buscar subcuenta..."
+                className="pl-10 pr-4 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#e74038]/20 text-sm w-60"
               />
             </div>
-
-            <button
-              onClick={onRefresh}
-              className="p-2.5 bg-[#e74038] text-white rounded-md hover:bg-[#d43529] transition-colors group relative"
-              title="Actualizar datos"
-            >
-              <RotateCcw className="w-5 h-5" />
-              <div className="absolute bottom-full right-0 mb-2 px-2 py-1 bg-slate-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
-                Actualizar
-              </div>
-            </button>
-
-            <button
-              onClick={() => setShowLegend(!showLegend)}
-              className="p-2.5 bg-slate-600 text-white rounded-md hover:bg-slate-700 transition-colors group relative"
-              title="Ver leyenda de status"
-            >
-              <Info className="w-5 h-5" />
-              <div className="absolute bottom-full right-0 mb-2 px-2 py-1 bg-slate-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
-                Leyenda
-              </div>
-            </button>
           </div>
         </div>
 
       </div>
-
-      {/* Legend Modal */}
-      {showLegend && (
-        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick={() => setShowLegend(false)}>
-          <div
-            className="bg-white rounded-2xl shadow-2xl w-full max-w-md animate-in fade-in zoom-in-95 duration-200"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="flex items-center justify-between px-6 py-4 border-b border-slate-200">
-              <h2 className="text-lg font-bold text-slate-900">Leyenda de Estados</h2>
-              <button
-                onClick={() => setShowLegend(false)}
-                className="p-2 rounded-lg hover:bg-slate-100 transition-colors text-slate-400 hover:text-slate-600"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </div>
-            <div className="p-6 space-y-4">
-              {STATUS_CONFIG.map((s) => {
-                const Icon = s.icon;
-                const count = s.key === 'success' ? stats.success : s.key === 'in-progress' ? stats.inProgress : s.key === 'pending' ? stats.pending : stats.error;
-                const pct = stats.total > 0 ? Math.round((count / stats.total) * 100) : 0;
-                const descriptions: Record<string, string> = {
-                  success: 'El proceso se completó correctamente sin errores.',
-                  'in-progress': 'El proceso se está ejecutando en este momento.',
-                  pending: 'El proceso está en espera de ser ejecutado.',
-                  error: 'El proceso falló durante la ejecución.',
-                };
-                return (
-                  <div key={s.key} className={`${s.bg} border ${s.border} rounded-xl p-4 flex items-start gap-4`}>
-                    <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ backgroundColor: s.color + '20' }}>
-                      <Icon className="w-5 h-5" style={{ color: s.color }} strokeWidth={s.key === 'success' || s.key === 'error' ? 3 : 2} />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center justify-between mb-1">
-                        <span className="text-sm font-bold text-slate-900">{s.label}</span>
-                        <span className="text-sm font-bold" style={{ color: s.color }}>{count} ({pct}%)</span>
-                      </div>
-                      <p className="text-xs text-slate-500">{descriptions[s.key]}</p>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* Detail Modal */}
       {showDetailModal && (

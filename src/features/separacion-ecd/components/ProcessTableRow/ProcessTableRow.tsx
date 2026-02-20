@@ -55,7 +55,7 @@ export function ProcessTableRow({
         </td>
 
         {/* Subcuenta Code - Sticky col 3 */}
-        <td className="px-4 py-3 font-medium text-slate-900 whitespace-nowrap sticky left-[72px] z-10 bg-white min-w-[140px]">
+        <td className="px-4 py-3 text-sm font-medium text-slate-900 whitespace-nowrap sticky left-[72px] z-10 bg-white min-w-[140px]">
           {subcuenta.code}
         </td>
 

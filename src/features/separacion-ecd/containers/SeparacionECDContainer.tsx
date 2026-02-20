@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useCallback } from 'react';
 import { Header } from '../components/Header/Header';
 import { FilterSection } from '../components/FilterSection/FilterSection';
 import { ProcessTable } from '../components/ProcessTable/ProcessTable';
@@ -23,9 +23,15 @@ export function SeparacionECDContainer() {
     mockSeparacionECDData.endDate
   );
 
-  const handleRefresh = () => {
-    console.log('Refreshing data...');
-  };
+  const [isRefreshing, setIsRefreshing] = useState(false);
+
+  const handleRefresh = useCallback(() => {
+    setIsRefreshing(true);
+    // Simulate data refresh
+    setTimeout(() => {
+      setIsRefreshing(false);
+    }, 1500);
+  }, []);
 
   const handleExecute = () => {
     executeAction(Array.from(selectedIds));
@@ -54,17 +60,20 @@ export function SeparacionECDContainer() {
         onEndDateChange={(date) => setDateRange(startDate, date)}
         onRefresh={handleRefresh}
         subcuentas={subcuentas}
+        isRefreshing={isRefreshing}
       />
 
       {/* Actions Bar */}
       <ActionsBar
         selectedCount={selectedIds.size}
+        subcuentas={subcuentas}
+        selectedIds={selectedIds}
         onExecute={handleExecute}
         onDelete={handleDelete}
       />
 
       {/* Process Table */}
-      <ProcessTable subcuentas={subcuentas} />
+      <ProcessTable subcuentas={subcuentas} isLoading={isRefreshing} />
     </main>
   );
 }
